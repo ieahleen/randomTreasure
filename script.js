@@ -3,7 +3,7 @@ document.querySelector("#b").addEventListener("click", treasureB);
 document.querySelector("#c").addEventListener("click", treasureC);
 document.querySelector("#d").addEventListener("click", treasureD);
 document.querySelector("#e").addEventListener("click", treasureE);
-// document.querySelector("#f").addEventListener("click", treasureF);
+document.querySelector("#f").addEventListener("click", treasureF);
 const weapons = "club, dagger, greatclub, handaxe, javelin, light hammer, mace, quarterstaff, sickle, spear, light crossbow, dart, shortbow, sling, battleaxe, flail, glaive, greatsword, halberd, lance, longsword, maul, mornignstar, pike, rapier, scimitar, shortsword, trident, war pick, warhammer, whip, blowgun, hand crossbow, heavy crossbow, longbow".split(
   ", "
 );
@@ -1100,5 +1100,161 @@ function magicItemsH() {
     case 37:
     case 38:
       return "Shield, +1";
+    case 39:
+    case 40:
+      return "Staff of fire";
+    case 41:
+    case 42: 
+      return "Staff of frost";
+    case 43:
+    case 44: 
+      return "Staff of power";
+    case 45:
+    case 46:
+      return "Staff of striking";
+    case 47:
+    case 48:
+      return "Staff of thunder and lightning";
+    case 49:
+    case 50:
+      return "Sword of sharpness";
+    case 51:
+    case 52:
+      return "Wand of polymorph";
+    case 53:
+    case 54:
+      return "Wand of the war mage, +3";
+    case 55:
+      return "Adamantine armor (half plafe)";
+    case 56:
+      return "Adamantine armor (plate)";
+    case 57:
+      return "Animated shield";
+    case 58:
+      return "Belt of fire giant strength";
+    case 59:
+      return `Belt of ${ranArr("frost", "stone")} giant strength`;
+    case 60:
+      return "Armor, +1 breastplate";
+    case 61:
+      return "Armor of resistance (breastplate), " + `${ranArr(
+        "Acid",
+        "Cold",
+        "Fire",
+        "Force",
+        "Lightning",
+        "Necrotic",
+        "Poison",
+        "Psychic",
+        "Radiant",
+        "Thunder"
+      )}`;
+    case 62:
+      return "Candle of invocation";
+    case 63:
+      return "Armor, +2 chain mail";
+    case 64:
+      return "Armor, +2 chain shirt";
+    case 65:
+      return "Cloak of arachnida";
+    case 66:
+      return "Dancing sword";
+    case 67:
+      return "Demon armor";
+    case 68:
+      return "Dragon scail mail";
+    case 69:
+      return "Dwarven plate";
+    case 70:
+      return "Dwarven thrower";
+    case 71:
+      return "Efreeti bottle";
+    case 72:
+      return "Figurine of wondrous power (obsidian steed)";
+    case 73:
+      return "Frost brand";
+    case 74:
+      return "Helm of brilliance";
+    case 75:
+      return "Horn of Valhalla (bronze)";
+    case 76:
+      return "Instrument of the bards (Anstruth harp)";
+    case 77:
+      return "Ioun stone (absorption)";
+    case 78:
+      return "Ioun stone (agility)";
+    case 79:
+      return "Ioun stone (fortitude)";
+    case 80:
+      return "Ioun stone (insight)";
+    case 81:
+      return "Ioun stone (intellect)";
+    case 82:
+      return "Ioun stone (leadership)";
+    case 83:
+      return "Ioun stone (strength)";
+    case 84:
+      return "Armor, +2 leather";
+    case 85:
+      return "Manual of bodily health";
+    case 86:
+      return "Manual of gainful existence";
+    case 87:
+      const title = "Manual of golems, ";
+      const f = rwn(20);
+      if (f <= 5) return title + "Clay";
+      if (f <= 17) return title + "Flesh";
+      if (f <= 18) return title + "Iron";
+      if (f <= 20) return title + "Stone";
+      break;
+    case 88:
+      return "Manual of quickness of action";
+    case 89:
+      return "Mirror of life trapping";
+    case 90:
+      return "Nine lives stealer, " + ranArr("greatsword", "longsword", "shortsword", "scimitar", "rapier");
+    case 91:
+      return "Oathbow";
+    case 92:
+      return "Armor, +2 scale mail";
+    case 93:
+      return "Spellguard shield";
+    case 94:
+      return "Armor +1, splint";
+    case 95:
+      return  "Armor of resistance (splint), " + `${ranArr(
+        "Acid",
+        "Cold",
+        "Fire",
+        "Force",
+        "Lightning",
+        "Necrotic",
+        "Poison",
+        "Psychic",
+        "Radiant",
+        "Thunder"
+      )}`;
+    case 96:
+      return "Armor, +1 studded leather";
+    case 97:
+      return "Armor or resistance (studded leather)" + `${ranArr(
+        "Acid",
+        "Cold",
+        "Fire",
+        "Force",
+        "Lightning",
+        "Necrotic",
+        "Poison",
+        "Psychic",
+        "Radiant",
+        "Thunder"
+      )}`;
+    case 98:
+      return "Tome of clear thought";
+    case 99:
+      return "Tome of leadership and influence";
+    case 100:
+      return "Tome of understanding";
+
   }
 }
