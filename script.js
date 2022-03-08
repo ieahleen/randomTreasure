@@ -3,7 +3,7 @@ document.querySelector("#b").addEventListener("click", treasureB);
 document.querySelector("#c").addEventListener("click", treasureC);
 document.querySelector("#d").addEventListener("click", treasureD);
 document.querySelector("#e").addEventListener("click", treasureE);
-document.querySelector("#f").addEventListener("click", treasureF);
+// document.querySelector("#f").addEventListener("click", treasureF);
 const weapons = "club, dagger, greatclub, handaxe, javelin, light hammer, mace, quarterstaff, sickle, spear, light crossbow, dart, shortbow, sling, battleaxe, flail, glaive, greatsword, halberd, lance, longsword, maul, mornignstar, pike, rapier, scimitar, shortsword, trident, war pick, warhammer, whip, blowgun, hand crossbow, heavy crossbow, longbow".split(
   ", "
 );
