@@ -10,6 +10,7 @@ import { magicItemsE } from "./tables/magicItemsE.js";
 import { magicItemsD } from "./tables/magicItemsD.js";
 import { magicItemsC } from "./tables/magicItemsC.js";
 import { magicItemsB } from "./tables/magicItemsB.js";
+import { magicItemsA } from "./tables/magicItemsA.js";
 
 const targetElement = document.querySelector("#t");
 document.querySelector("#a").addEventListener("click", treasureA);
@@ -339,16 +340,4 @@ function gems100() {
         "red"
       )})`;
   }
-}
-
-function magicItemsA() {
-  const n = rwn(100);
-  if (n <= 50) return "Potion of healing";
-  if (n <= 60) return `${ranArr(cantrips)} spell scroll (cantrip)`;
-  if (n <= 70) return "Potion of climbing";
-  if (n <= 90) return `${ranArr(spells1)} spell scroll (1st level)`;
-  if (n <= 94) return `${ranArr(spells2)} spell scroll (2nd level)`;
-  if (n <= 98) return "Potion of greater healing";
-  if (n <= 99) return "Bag of holding";
-  if (n <= 100) return "Driftglobe";
 }
