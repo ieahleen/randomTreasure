@@ -1,6 +1,6 @@
-import { weapons } from "../lists/weapons";
-import { ranArr } from "../utils/helpers";
-import { rwn } from "../utils/randomWholeNumber";
+import { weapons } from "../lists/weapons.js";
+import { ranArr } from "../utils/helpers.js";
+import { rwn } from "../utils/randomWholeNumber.js";
 
 export function magicItemsF() {
 	const n = rwn(100);

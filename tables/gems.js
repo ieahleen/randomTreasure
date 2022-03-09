@@ -1,5 +1,5 @@
-import { rwn } from "../utils/randomWholeNumber";
-import { ranArr } from "../utils/helpers";
+import { rwn } from "../utils/randomWholeNumber.js";
+import { ranArr } from "../utils/helpers.js";
 
 function gems10() {
 	const y = rwn(12);

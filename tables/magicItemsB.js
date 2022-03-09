@@ -1,6 +1,6 @@
-import { rwn } from "../utils/randomWholeNumber";
-import { ranArr } from "../utils/helpers";
-import { spells2, spells3 } from "../lists/spells";
+import { rwn } from "../utils/randomWholeNumber.js";
+import { ranArr } from "../utils/helpers.js";
+import { spells2, spells3 } from "../lists/spells.js";
 
 export function magicItemsB() {
 	const n = rwn(100);
