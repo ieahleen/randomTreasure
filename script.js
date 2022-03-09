@@ -10,7 +10,7 @@ import { magicItemsC } from "./tables/magicItemsC.js";
 import { magicItemsB } from "./tables/magicItemsB.js";
 import { magicItemsA } from "./tables/magicItemsA.js";
 import { gems10, gems50, gems100 } from "./tables/gems.js";
-import { treasureA } from "./individualTreasureTables/challenge4.js";
+import { treasureA } from "./individualTreasureTables/challenge0-4.js";
 
 const targetElement = document.querySelector("#t");
 
