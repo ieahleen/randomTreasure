@@ -6,6 +6,7 @@ import { ranArr, objects } from "./utils/helpers.js"
 import { magicItemsH } from "./tables/magicItemsH.js";
 import { magicItemsG } from "./tables/magicItemsG.js";
 import { magicItemsF } from "./tables/magicItemsF.js";
+import { magicItemsE } from "./tables/magicItemsE.js";
 
 const targetElement = document.querySelector("#t");
 document.querySelector("#a").addEventListener("click", treasureA);
@@ -533,15 +534,3 @@ function magicItemsD() {
   if (n <= 99) return "Bag of devouring";
   if (n <= 100) return "Portable Hole";
 }
-function magicItemsE() {
-  const n = rwn(100);
-  if (n <= 30) return `${ranArr(spells8)} spell scroll (8th level)`;
-  if (n <= 55) return "Potion of storm giant strength";
-  if (n <= 70) return "Potion of supreme healing";
-  if (n <= 85) return `${ranArr(spells9)} spell scroll (9th level)`;
-  if (n <= 93) return "Universal solvent";
-  if (n <= 98) return "Arrow of slaying";
-  if (n <= 100) return "Sovereign glue";
-}
-
-
