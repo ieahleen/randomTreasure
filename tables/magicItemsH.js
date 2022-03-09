@@ -1,6 +1,6 @@
-import { ranArr } from "../helpers.js";
-import { weapons } from "../weapons.js"
-import { rwn } from "../randomWholeNumber.js"
+import { ranArr } from "../utils/helpers.js";
+import { weapons } from "../lists/weapons.js"
+import { rwn } from "../utils/randomWholeNumber.js"
 
 function magicItemsH() {
     const n = rwn(100);

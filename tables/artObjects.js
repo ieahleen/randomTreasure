@@ -1,4 +1,4 @@
-import {rwn} from "./randomWholeNumber.js"
+import {rwn} from "../utils/randomWholeNumber.js"
 
 function art25() {
     const n = rwn(10);
