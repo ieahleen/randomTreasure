@@ -11,66 +11,11 @@ import { magicItemsB } from "./tables/magicItemsB.js";
 import { magicItemsA } from "./tables/magicItemsA.js";
 import { gems10, gems50, gems100 } from "./tables/gems.js";
 import { treasureA } from "./individualTreasureTables/challenge0-4.js";
+import { treasureB } from "./individualTreasureTables/challenge5-10.js";
+import { treasureC } from "./individualTreasureTables/challenge11-16.js";
+import { treasureD } from "./individualTreasureTables/challenge17+.js";
 
 const targetElement = document.querySelector("#t");
-
-function treasureB() {
-	const t = rwn(100);
-	const treasure = {};
-	if (t <= 30) {
-		treasure.CP = numberCoins(4, 6, 100);
-		treasure.EP = numberCoins(1, 6, 10);
-	} else if (t <= 60) {
-		treasure.SP = numberCoins(6, 6, 10);
-		treasure.GP = numberCoins(2, 6, 10);
-	} else if (t <= 70) {
-		treasure.EP = numberCoins(3, 6, 10);
-		treasure.GP = numberCoins(2, 6, 10);
-	} else if (t <= 95) {
-		treasure.GP = numberCoins(4, 6, 10);
-	} else {
-		treasure.GP = numberCoins(2, 6, 10);
-		treasure.PP = numberCoins(3, 6, 1);
-	}
-
-	return treasure;
-}
-
-function treasureC() {
-	const t = rwn(100);
-	const treasure = {};
-	if (t <= 20) {
-		treasure.SP = numberCoins(4, 6, 100);
-		treasure.GP = numberCoins(1, 6, 100);
-	} else if (t <= 35) {
-		treasure.EP = numberCoins(1, 6, 100);
-		treasure.GP = numberCoins(1, 6, 100);
-	} else if (t <= 75) {
-		treasure.GP = numberCoins(2, 6, 100);
-		treasure.PP = numberCoins(1, 6, 10);
-	} else {
-		treasure.GP = numberCoins(2, 6, 100);
-		treasure.PP = numberCoins(2, 6, 10);
-	}
-
-	return treasure;
-}
-
-function treasureD() {
-	const c = rwn(100);
-	const treasure = {};
-	if (c <= 15) {
-		treasure.EP = numberCoins(2, 6, 1000);
-		treasure.GP = numberCoins(8, 6, 100);
-	} else if (c <= 55) {
-		treasure.GP = numberCoins(1, 6, 1000);
-		treasure.PP = numberCoins(1, 6, 100);
-	} else if (c <= 100) {
-		treasure.GP = numberCoins(1, 6, 1000);
-		treasure.PP = numberCoins(2, 6, 100);
-	}
-	return treasure;
-}
 
 function treasureE() {
 	const treasure = {
@@ -202,6 +147,7 @@ function treasureF() {
 	}
 	return treasure;
 }
+
 document.querySelector("#a").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureA(), null, 2));
 document.querySelector("#b").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureB(), null, 2));
 document.querySelector("#c").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureC(), null, 2));
