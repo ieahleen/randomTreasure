@@ -202,7 +202,7 @@ function treasureF() {
 	}
 	return treasure;
 }
-document.querySelector("#a").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureA(), null, 2), alert("fine"));
+document.querySelector("#a").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureA(), null, 2));
 document.querySelector("#b").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureB(), null, 2));
 document.querySelector("#c").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureC(), null, 2));
 document.querySelector("#d").addEventListener("click", () => targetElement.textContent = JSON.stringify(treasureD(), null, 2));
