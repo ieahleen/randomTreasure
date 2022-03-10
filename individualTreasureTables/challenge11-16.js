@@ -1,5 +1,5 @@
-import { rwn } from "../utils/randomWholeNumber";
-import { numberCoins } from "../utils/numberOfCoins";
+import { rwn } from "../utils/randomWholeNumber.js";
+import { numberCoins } from "../utils/numberOfCoins.js";
 
 export function treasureC() {
 	const t = rwn(100);
