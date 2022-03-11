@@ -1,7 +1,9 @@
 import { armors } from "../lists/other.js";
 import { spells1, spells2, spells3 } from "../lists/spells.js";
 import { swords } from "../lists/weapons.js";
-import {rwn} from "./randomWholeNumber.js";
+import { numberCoins } from "./numberOfCoins.js";
+import { rwn } from "./randomWholeNumber.js";
+import { gems100 } from "../tables/gems.js"
 
 export function ranArr(...arr) {
 	if (Array.isArray(arr[0])) arr = arr[0];
@@ -96,7 +98,7 @@ function randomPatch() {
 }
 
 export function randomPatches() {
-	const n = randomCoins(4,4,1);
+	const n = numberCoins(4,4,1);
 	const arr = [];
 	for (let i = 1; i <= n; i++) {
 		arr.push(randomPatch())

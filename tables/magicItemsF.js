@@ -1,5 +1,5 @@
 import { weapons } from "../lists/weapons.js";
-import { ranArr } from "../utils/helpers.js";
+import { ranArr, randomSword } from "../utils/helpers.js";
 import { rwn } from "../utils/randomWholeNumber.js";
 
 export function magicItemsF() {
