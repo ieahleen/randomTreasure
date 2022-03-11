@@ -1,4 +1,5 @@
 import { rwn } from "../utils/randomWholeNumber.js";
+import { objects } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
 import { art25, art250 } from "../tables/artObjects.js";
 import { gems50, gems100 } from "../tables/gems.js";
