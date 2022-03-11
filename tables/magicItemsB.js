@@ -1,5 +1,5 @@
 import { rwn } from "../utils/randomWholeNumber.js";
-import { ranArr } from "../utils/helpers.js";
+import { ranArr, randomArmor, randomPatches } from "../utils/helpers.js";
 import { spells2, spells3 } from "../lists/spells.js";
 
 export function magicItemsB() {
@@ -64,7 +64,7 @@ export function magicItemsB() {
 	case 91:
 		return "Lantern of revealing";
 	case 92:
-		return "Mariner's armor";
+		return "Mariner's armor, " + randomArmor();
 	case 93:
 		return "Mithral Armor";
 	case 94:
@@ -72,7 +72,7 @@ export function magicItemsB() {
 	case 95:
 		return "Ring of swimming";
 	case 96:
-		return "Robe of useful items";
+		return {name:"Robe of useful items", standardPatches: "Dagger x2, Bullseye lantern (filled and lit) x2, Steel mirror x2, 10-foot pole x2, Hempen rope (50ft, coiled) x2, Sack x2", extraPatches: randomPatches()};
 	case 97:
 		return "Rope of climbing";
 	case 98:

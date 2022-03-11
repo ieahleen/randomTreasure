@@ -44,7 +44,7 @@ export function magicItemsI() {
         case 38: return "Staff of the magi";
         case 39:
         case 40:
-        case 41: return "Vorpal sword";
+        case 41: return "Vorpal sword, " + ranArr("longsword", "scimitar", "greatsword");
         case 42:
         case 43: return "Belt of cloud giant strength";
         case 44:

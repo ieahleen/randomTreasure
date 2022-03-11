@@ -76,7 +76,7 @@ function magicItemsH() {
 		return "Staff of thunder and lightning";
 	case 49:
 	case 50:
-		return "Sword of sharpness";
+		return "Sword of sharpness, " + ranArr("longsword", "scimitar", "greatsword");
 	case 51:
 	case 52:
 		return "Wand of polymorph";
@@ -160,7 +160,7 @@ function magicItemsH() {
 	case 89:
 		return "Mirror of life trapping";
 	case 90:
-		return "Nine lives stealer, " + ranArr("greatsword", "longsword", "shortsword", "scimitar", "rapier");
+		return "Nine lives stealer, " + randomSword();
 	case 91:
 		return "Oathbow";
 	case 92:

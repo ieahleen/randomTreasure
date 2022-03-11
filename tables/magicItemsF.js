@@ -65,7 +65,7 @@ export function magicItemsF() {
 		return "Staff of the python";
 	case 54:
 	case 55:
-		return "Sword of vengeance";
+		return "Sword of vengeance, " + randomSword();
 	case 56:
 	case 57:
 		return "Trident of fish command";

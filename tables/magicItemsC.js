@@ -1,6 +1,6 @@
 import { rwn } from "../utils/randomWholeNumber.js";
 import { spells4, spells5 } from "../lists/spells.js";
-import { ranArr } from "../utils/helpers.js";
+import { ranArr, randomFeatherToken, randomProtection } from "../utils/helpers.js";
 
 export function magicItemsC() {
 	const n = rwn(100);
@@ -38,11 +38,11 @@ export function magicItemsC() {
 	case 82:
 	case 83:
 	case 84:
-		return "Quaal's feather token";
+		return "Quaal's feather token, " + randomFeatherToken();
 	case 85:
 	case 86:
 	case 87:
-		return "Scroll of protection";
+		return "Scroll of protection, " + randomProtection();
 	case 88:
 	case 89:
 		return "Bag of beans";

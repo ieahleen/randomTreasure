@@ -1,5 +1,5 @@
 import { ranArr, randomSword } from "../utils/helpers.js";
-import { weapons } from "../lists/weapons.js";
+import { swords, weapons } from "../lists/weapons.js";
 import { rwn } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
 
@@ -96,11 +96,11 @@ export function magicItemsG() {
 	case 41:
 		return "Elven chain";
 	case 42:
-		return "Flame tongue";
+		return "Flame tongue, " + randomSword();
 	case 43:
 		return "Gem of seeing";
 	case 44:
-		return "Giant slayer";
+		return "Giant slayer, " + ranArr(...swords, battleaxe, handaxe);
 	case 45:
 		return "Glamoured studded leather";
 	case 46:
@@ -202,13 +202,13 @@ export function magicItemsG() {
 	case 87:
 		return "Sun blade";
 	case 88:
-		return "Sword of life stealing";
+		return "Sword of life stealing, " + randomSword();
 	case 89:
-		return "Sword of wounding";
+		return "Sword of wounding, " + randomSword();
 	case 90:
 		return "Tentacle rod";
 	case 91:
-		return "Vicious weapon";
+		return "Vicious weapon, " + ranArr(weapons);
 	case 92:
 		return "Wand of binding";
 	case 93:
