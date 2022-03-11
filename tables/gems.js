@@ -1,7 +1,7 @@
 import { rwn } from "../utils/randomWholeNumber.js";
 import { ranArr } from "../utils/helpers.js";
 
-function gems10() {
+export function gems10() {
 	const y = rwn(12);
 	switch (y) {
 	case 1:
@@ -44,7 +44,8 @@ function gems10() {
 		return "Turquoise (opaque light blue-green)";
 	}
 }
-function gems50() {
+
+export function gems50() {
 	const n = rwn(12);
 	switch (n) {
 	case 1:
@@ -77,7 +78,8 @@ function gems50() {
 		return "Zircon (transparent pale blue-green)";
 	}
 }
-function gems100() {
+
+export function gems100() {
 	const n = rwn(10);
 	switch (n) {
 	case 1:
@@ -112,4 +114,38 @@ function gems100() {
 	}
 }
 
-export {gems10, gems50, gems100};
+export function gems500 () {
+	const n = rwn(6);
+	switch (n) {
+		case 1: return "Alexandrite (transparent dark green)";
+		case 2: return "Aquamarine (transparent pale blue-green)";
+		case 3: return "Black pearl (opaque oure black)";
+		case 4: return "Blue spinel (transparent deep blue)";
+		case 5: return "Peridot (transparent rich olive green)";
+		case 6: return "Topaz (transparent golden yellow)";
+	}
+}
+
+export function gems1000 () {
+	const n = rwn(8);
+	switch (n) {
+		case 1: return "Black opal (translucent dark green with black mottling and golden flecks)";
+		case 2: return "Blue sapphire (transparent blue-white to medium blue)";
+		case 3: return "Emerald (transparent deep bright green)";
+		case 4: return "Fire opal (translucent fiery red)";
+		case 5: return "Opal (translucent pale blue with green and golden mottling)";
+		case 6: return "Star ruby (translucent ruby with white star-shaped center)";
+		case 7: return "Star sapphire (translucent blue sapphire with white star-shaped center)";
+		case 8: return `Yellow sapphire (transparent ${ranArr("fiery yellow", "yellow-green")})`;
+	}
+}
+
+export function gems5000 () {
+	const n = rwn(4);
+	switch (n) {
+		case 1: return "Black sapphire (translucent lustruous black with glowing highlights)";
+		case 2: return `Diamond (transparent ${ranArr("blue-white", "canary", "pink", "brown", "blue")})`;
+		case 3: return "Jacinth (transparent fiery orange)";
+		case 4: return "Ruby (transparent clear red to deep crimson)";
+	}
+}
