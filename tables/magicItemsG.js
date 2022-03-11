@@ -2,6 +2,7 @@
 import { ranArr } from "../utils/helpers.js";
 import { weapons } from "../lists/weapons.js";
 import { rwn } from "../utils/randomWholeNumber.js";
+import { damageTypes } from "../lists/other.js";
 
 export function magicItemsG() {
 	const n = rwn(100);
@@ -74,11 +75,11 @@ export function magicItemsG() {
 	case 30:
 		return "Armor, +1 chain mail";
 	case 31:
-		return "Armor of resistance (chain mail);";
+		return "Armor of resistance (chain mail), " + ranArr(damageTypes);
 	case 32:
 		return "Armor, +1 (chain shirt)";
 	case 33:
-		return "Armor of resistance (chain shirt)";
+		return "Armor of resistance (chain shirt), " + ranArr(damageTypes);
 	case 34:
 		return "Cloak of displacement";
 	case 35:
@@ -129,18 +130,7 @@ export function magicItemsG() {
 	case 56:
 		return "Armor, +1 leather";
 	case 57:
-		return `Armor of resistance (leather), ${ranArr(
-			"Acid",
-			"Cold",
-			"Fire",
-			"Force",
-			"Lightning",
-			"Necrotic",
-			"Poison",
-			"Psychic",
-			"Radiant",
-			"Thunder"
-		)}`;
+		return "Armor of resistance (leather), " + ranArr(damageTypes);
 	case 58:
 		return "Mace of disruption";
 	case 59:
@@ -164,10 +154,7 @@ export function magicItemsG() {
 	case 68:
 		return "Ring of protection";
 	case 69:
-		return (
-			"Ring of resistance, " +
-          `${ranArr("Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder")}`
-		);
+		return "Ring of resistance, " + ranArr(damageTypes);
 	case 70:
 		return "Ring of spell storing";
 	case 71:

@@ -1,0 +1,1 @@
+export const damageTypes = [acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, thunder];

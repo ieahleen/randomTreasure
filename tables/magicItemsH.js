@@ -1,7 +1,7 @@
-/* eslint-disable no-case-declarations */
 import { ranArr } from "../utils/helpers.js";
 import { weapons } from "../lists/weapons.js";
 import { rwn } from "../utils/randomWholeNumber.js";
+import { damageTypes } from "../lists/other.js";
 
 function magicItemsH() {
 	const n = rwn(100);
@@ -96,18 +96,7 @@ function magicItemsH() {
 	case 60:
 		return "Armor, +1 breastplate";
 	case 61:
-		return "Armor of resistance (breastplate), " + `${ranArr(
-			"Acid",
-			"Cold",
-			"Fire",
-			"Force",
-			"Lightning",
-			"Necrotic",
-			"Poison",
-			"Psychic",
-			"Radiant",
-			"Thunder"
-		)}`;
+		return "Armor of resistance (breastplate), " + ranArr(damageTypes);
 	case 62:
 		return "Candle of invocation";
 	case 63:
@@ -181,33 +170,11 @@ function magicItemsH() {
 	case 94:
 		return "Armor +1, splint";
 	case 95:
-		return  "Armor of resistance (splint), " + `${ranArr(
-			"Acid",
-			"Cold",
-			"Fire",
-			"Force",
-			"Lightning",
-			"Necrotic",
-			"Poison",
-			"Psychic",
-			"Radiant",
-			"Thunder"
-		)}`;
+		return  "Armor of resistance (splint), " + ranArr(damageTypes);
 	case 96:
 		return "Armor, +1 studded leather";
 	case 97:
-		return "Armor or resistance (studded leather)" + `${ranArr(
-			"Acid",
-			"Cold",
-			"Fire",
-			"Force",
-			"Lightning",
-			"Necrotic",
-			"Poison",
-			"Psychic",
-			"Radiant",
-			"Thunder"
-		)}`;
+		return "Armor or resistance (studded leather), " + ranArr(damageTypes);
 	case 98:
 		return "Tome of clear thought";
 	case 99:
