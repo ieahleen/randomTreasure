@@ -1,5 +1,4 @@
-/* eslint-disable no-case-declarations */
-import { ranArr } from "../utils/helpers.js";
+import { ranArr, randomSword } from "../utils/helpers.js";
 import { weapons } from "../lists/weapons.js";
 import { rwn } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
@@ -93,7 +92,7 @@ export function magicItemsG() {
 	case 39:
 		return "Dimensional shackles";
 	case 40:
-		return "Dragon slayer";
+		return "Dragon slayer, " + randomSword();
 	case 41:
 		return "Elven chain";
 	case 42:

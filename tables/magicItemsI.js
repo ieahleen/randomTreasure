@@ -1,3 +1,4 @@
+import { ranArr, randomSword } from "../utils/helpers";
 import { rwn } from "../utils/randomWholeNumber";
 
 export function magicItemsI() {
@@ -7,7 +8,7 @@ export function magicItemsI() {
         case 2:
         case 3:
         case 4:
-        case 5: return "Defender";
+        case 5: return "Defender, " + randomSword();
         case 6:
         case 7:
         case 8:
@@ -17,7 +18,7 @@ export function magicItemsI() {
         case 12:
         case 13:
         case 14:
-        case 15: return "Lucky blade";
+        case 15: return "Luck blade, " + randomSword();
         case 16:
         case 17:
         case 18:
@@ -25,10 +26,10 @@ export function magicItemsI() {
         case 20: return "Sword of answering";
         case 21:
         case 22:
-        case 23: return "Holy avenger";
+        case 23: return "Holy avenger, " + randomSword();
         case 24:
         case 25:
-        case 26: return "Ring of djinni summoning";ù
+        case 26: return "Ring of djinni summoning";
         case 27:
         case 28:
         case 29: return "Ring of invisibility";
@@ -55,7 +56,7 @@ export function magicItemsI() {
         case 50:
         case 51: return "Cloak of invisibility";
         case 52:
-        case 53: return "Crystal ball (legendary version)";
+        case 53: return "Crystal ball of " + ranArr("Mind Reading", "Telepathy", "True Seeing");
         case 54:
         case 55: return "Armor, +1 half plate";
         case 56:
@@ -102,7 +103,7 @@ export function magicItemsI() {
             case 81: return "Deck of many things";
             case 82: return "Efreeti chain";
             case 83: return "Armor of resistance, " + ranArr(damageTypes);
-            case 84: return "Horn of Valhalla";
+            case 84: return "Horn of Valhalla (iron)";
             case 85: return "Instrument of the bards (Ollamh harp";
             case 86: return "Ioun stone (greater absorption";
             case 87: return "Ioun stone (mastery)";

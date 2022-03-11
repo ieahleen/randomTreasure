@@ -1,4 +1,4 @@
-import { ranArr } from "../utils/helpers.js";
+import { carpetSize, ranArr, randomAlignment, randomSword } from "../utils/helpers.js";
 import { weapons } from "../lists/weapons.js";
 import { rwn } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
@@ -22,10 +22,10 @@ function magicItemsH() {
 		return "Amulet of the planes";
 	case 13:
 	case 14:
-		return "Carpet of flying";
+		return "Carpet of flying, " + carpetSize();
 	case 15:
 	case 16:
-		return "Crystal ball (very rare version)";
+		return "Crystal ball";
 	case 17:
 	case 18:
 		return "Ring of regeneration";
@@ -98,7 +98,7 @@ function magicItemsH() {
 	case 61:
 		return "Armor of resistance (breastplate), " + ranArr(damageTypes);
 	case 62:
-		return "Candle of invocation";
+		return "Candle of invocation, " + randomAlignment();
 	case 63:
 		return "Armor, +2 chain mail";
 	case 64:
@@ -106,7 +106,7 @@ function magicItemsH() {
 	case 65:
 		return "Cloak of arachnida";
 	case 66:
-		return "Dancing sword";
+		return "Dancing sword, " + randomSword();
 	case 67:
 		return "Demon armor";
 	case 68:
@@ -120,7 +120,7 @@ function magicItemsH() {
 	case 72:
 		return "Figurine of wondrous power (obsidian steed)";
 	case 73:
-		return "Frost brand";
+		return "Frost brand, " + randomSword();
 	case 74:
 		return "Helm of brilliance";
 	case 75:
