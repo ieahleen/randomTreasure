@@ -61,7 +61,7 @@ export function gems50() {
 	case 6:
 		return `Jasper (opaque ${ranArr("blue", "black", "brown")})`;
 	case 7:
-		return "Moonstone (translucent withe with pale blue glow)";
+		return "Moonstone (translucent white with pale blue glow)";
 	case 8:
 		return `Onyx (opaque bands of ${ranArr(
 			"black and white",
