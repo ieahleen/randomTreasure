@@ -1,12 +1,13 @@
 import { rwn } from "../utils/randomWholeNumber.js";
 import { ranArr, randomArmor, randomPatches } from "../utils/helpers.js";
 import { spells2, spells3 } from "../lists/spells.js";
+import { damageTypes } from "../lists/other.js";
 
 export function magicItemsB() {
 	const n = rwn(100);
 	if (n <= 15) return "Potion of greater healing";
 	if (n <= 22) return "Potion of fire breath";
-	if (n <= 29) return "Potion of resistance, " + ranArr(damageTypes);
+	if (n <= 29) return "Potion of resistance, " + ranArr(damageTypes)
 	if (n <= 34)
 		return `Ammunition, +1 ${ranArr(
 			"arrow",
