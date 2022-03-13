@@ -2,10 +2,10 @@ import { treasureA } from "./individualTreasureTables/challenge0-4.js";
 import { treasureB } from "./individualTreasureTables/challenge5-10.js";
 import { treasureC } from "./individualTreasureTables/challenge11-16.js";
 import { treasureD } from "./individualTreasureTables/challenge17+.js";
-import { treasureE } from "./trasureHoardTables/challenge0-4.js";
-import { treasureF } from "./trasureHoardTables/challenge5-10.js";
-import { treasureG } from "./trasureHoardTables/challenge11-16.js";
-import { treasureH } from "./trasureHoardTables/challenge17+.js";
+import { treasureE } from "./treasureHoardTables/challenge0-4.js";
+import { treasureF } from "./treasureHoardTables/challenge5-10.js.js";
+import { treasureG } from "./treasureHoardTables/challenge11-16.js";
+import { treasureH } from "./treasureHoardTables/challenge17+.js.js";
 
 const targetElement = document.querySelector("#t");
 
