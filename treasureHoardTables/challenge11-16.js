@@ -77,4 +77,6 @@ export function treasureG() {
     } else {
         treasure["Magic Items"] = objects(1,1,magicItemsI);
     }
+    
+    return treasure;
 }
