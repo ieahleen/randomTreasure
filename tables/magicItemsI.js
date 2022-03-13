@@ -1,5 +1,5 @@
-import { ranArr, randomSword } from "../utils/helpers";
-import { rwn } from "../utils/randomWholeNumber";
+import { ranArr, randomSword } from "../utils/helpers.js";
+import { rwn } from "../utils/randomWholeNumber.js";
 
 export function magicItemsI() {
     const n = rwn(100);
