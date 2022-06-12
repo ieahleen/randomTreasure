@@ -1,8 +1,8 @@
 import { ranArr, randomSword } from "../utils/helpers.js";
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function magicItemsI() {
-    const n = rwn(100);
+    const n = randomWholeNumber(100);
     switch(n) {
         case 1:
         case 2:
@@ -80,7 +80,7 @@ export function magicItemsI() {
         case 74:
         case 75: return "Well of many words";
         case 76:
-            const f = rwn(12);
+            const f = randomWholeNumber(12);
             switch(f) {
                 case 1:
                 case 2: return "Armor, +2 half plate";

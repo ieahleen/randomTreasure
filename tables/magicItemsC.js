@@ -1,9 +1,9 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { spells4, spells5 } from "../lists/spells.js";
 import { ranArr, randomFeatherToken, randomProtection } from "../utils/helpers.js";
 
 export function magicItemsC() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 15) return "Potion of superior healing";
 	if (n <= 22) return `${ranArr(spells4)} spell scroll (4th level)`;
 	if (n <= 27)

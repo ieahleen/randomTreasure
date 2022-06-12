@@ -1,10 +1,10 @@
 import { carpetSize, ranArr, randomAlignment, randomSword } from "../utils/helpers.js";
 import { weapons } from "../lists/weapons.js";
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
 
 function magicItemsH() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	switch (n) {
 	case 1:
 	case 2:
@@ -149,7 +149,7 @@ function magicItemsH() {
 		return "Manual of gainful existence";
 	case 87:
 		const title = "Manual of golems, ";
-		const f = rwn(20);
+		const f = randomWholeNumber(20);
 		if (f <= 5) return title + "Clay";
 		if (f <= 17) return title + "Flesh";
 		if (f <= 18) return title + "Iron";

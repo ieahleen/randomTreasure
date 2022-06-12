@@ -1,8 +1,8 @@
-import { rwn } from "../utils/randomWholeNumber.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
+import { randomWholeNumber } from "../utiles/helpers.js"
 
 export function treasureD() {
-	const c = rwn(100);
+	const c = randomWholeNumber(100);
 	const treasure = {};
 	if (c <= 15) {
 		treasure.EP = numberCoins(2, 6, 1000);

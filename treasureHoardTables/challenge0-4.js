@@ -7,7 +7,7 @@ import { magicItemsB } from "../tables/magicItemsB.js";
 import { magicItemsC } from "../tables/magicItemsC.js";
 import { magicItemsF } from "../tables/magicItemsF.js";
 import { magicItemsG } from "../tables/magicItemsG.js";
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function treasureE () {
 	const treasure = {
@@ -16,7 +16,7 @@ export function treasureE () {
 		GP: numberCoins(2, 6, 10)
 	};
 
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 6) {
 		// nothing
 	} else if (n <= 16) {

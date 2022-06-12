@@ -1,9 +1,9 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { ranArr } from "../utils/helpers.js";
 import { spells6, spells7, spells8 } from "../lists/spells.js";
 
 export function magicItemsD() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 20) return "Potion of supreme healing";
 	if (n <= 30) return "Potion of invisibility";
 	if (n <= 40) return "Potion of speed";

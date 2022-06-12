@@ -8,14 +8,14 @@ import { magicItemsH } from "../tables/magicItemsH.js";
 import { magicItemsI } from "../tables/magicItemsI.js";
 import { objects } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function treasureH () {
     const treasure = {};
     treasure.GP = numberCoins(12,6,1000);
     treasure.PP = numberCoins(8,6,1000);
 
-    const n = rwn(100);
+    const n = randomWholeNumber(100);
     // Gems or Art Objects
     if (n <= 2) {
 

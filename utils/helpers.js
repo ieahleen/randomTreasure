@@ -2,18 +2,21 @@ import { armors } from "../lists/other.js";
 import { spells1, spells2, spells3 } from "../lists/spells.js";
 import { swords } from "../lists/weapons.js";
 import { numberCoins } from "./numberOfCoins.js";
-import { rwn } from "./randomWholeNumber.js";
 import { gems100 } from "../tables/gems.js"
 
 export function ranArr(...arr) {
 	if (Array.isArray(arr[0])) arr = arr[0];
 	return arr[Math.floor(Math.random() * arr.length)];
 }
+
+export function randomWholeNumber(max) {
+	return Math.floor(Math.random() * max) + 1;
+}
   
 export function objects(num, die, table) {
 	let n = 0;
 	for (let i = 0; i < num; i++) {
-		n += rwn(die);
+		n += randomWholeNumber(die);
 	}
 	const arr = [];
 	for (let j = 0; j < n; j++) {
@@ -24,7 +27,7 @@ export function objects(num, die, table) {
 }
 
 export function randomAlignment() {
-	const n = rwn(n);
+	const n = randomWholeNumber(n);
 	switch(n) {
 		case 1:
 		case 2: return "chaotic evil";
@@ -50,7 +53,7 @@ export function randomAlignment() {
 }
 
 export function carpetSize() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 20) return "3 ft. x 5 ft.";
 	if (n <= 55) return "4 ft. x 6 ft.";
 	if (n <= 80) return "5 ft. x 7 ft.";
@@ -66,7 +69,7 @@ export function randomArmor() {
 }
 
 export function randomFeatherToken() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 20) return "anchor";
 	if (n <= 35) return "bird";
 	if (n <= 50) return "fan";
@@ -76,7 +79,7 @@ export function randomFeatherToken() {
 }
 
 function randomPatch() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 8) return "Bag of 100 gp";
 	if (n <= 15) return "Silver coffer";
 	if (n <= 22) return "Iron door";
@@ -87,7 +90,7 @@ function randomPatch() {
 	if (n <= 68) return "4 potions of healing";
 	if (n <= 75) return "Rowboat 12 ft.";
 	if (n <= 83) {
-		const f = rwn(6);
+		const f = randomWholeNumber(6);
 		if (n <= 3) return `${ranArr(spells1)} spell scroll (1st level)`;
 		if (n <= 5) return `${ranArr(spells2)} spell scroll (2nd level)`;
 		if (n <= 6)return `${ranArr(spells3)} spell scroll (3rd level)`;
@@ -107,7 +110,7 @@ export function randomPatches() {
 }
 
 export function randomProtection() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 10) return "aberrations";
 	if (n <= 20) return "beats";
 	if (n <= 30) return "celestials";

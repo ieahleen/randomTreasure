@@ -1,8 +1,8 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
 
 export function treasureB() {
-	const t = rwn(100);
+	const t = randomWholeNumber(100);
 	const treasure = {};
 	if (t <= 30) {
 		treasure.CP = numberCoins(4, 6, 100);
