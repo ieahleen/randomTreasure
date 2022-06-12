@@ -1,9 +1,9 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { ranArr } from "../utils/helpers.js";
 import { cantrips, spells1, spells2 } from "../lists/spells.js";
 
 export function magicItemsA() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 50) return "Potion of healing";
 	if (n <= 60) return `${ranArr(cantrips)} spell scroll (cantrip)`;
 	if (n <= 70) return "Potion of climbing";

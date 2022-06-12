@@ -1,9 +1,9 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { ranArr } from "../utils/helpers.js";
 import { spells8, spells9 } from "../lists/spells.js";
 
 export function magicItemsE() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	if (n <= 30) return `${ranArr(spells8)} spell scroll (8th level)`;
 	if (n <= 55) return "Potion of storm giant strength";
 	if (n <= 70) return "Potion of supreme healing";

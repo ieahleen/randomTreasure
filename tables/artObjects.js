@@ -1,7 +1,7 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/helpers.js";
 
 export function art25() {
-	const n = rwn(10);
+	const n = randomWholeNumber(10);
 	switch (n) {
 		case 1:
 			return "Silver ewer";
@@ -27,7 +27,7 @@ export function art25() {
 }
 
 export function art250() {
-	const a = rwn(10);
+	const a = randomWholeNumber(10);
 	switch (a) {
 		case 1:
 			return "Gold ring set with bloodstones";
@@ -53,7 +53,7 @@ export function art250() {
 }
 
 export function art750() {
-	const n = rwn(10);
+	const n = randomWholeNumber(10);
 	return [
 		"Silver chalice set with moonstones",
 		"Silver-plated steel longsword with jet set in hilt",
@@ -69,7 +69,7 @@ export function art750() {
 }
 
 export function art2500() {
-	const n = rwn(10);
+	const n = randomWholeNumber(10);
 	return [
 		"Fine gold chain set with a fire opal",
 		"Old masterpiece painting",
@@ -85,7 +85,7 @@ export function art2500() {
 }
 
 export function art7500() {
-	const n = rwn(8);
+	const n = randomWholeNumber(8);
 	return [
 		"Jeweled gold crown",
 		"Jeweled platinum ring",

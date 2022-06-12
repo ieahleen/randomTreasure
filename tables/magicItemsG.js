@@ -1,10 +1,10 @@
 import { ranArr, randomSword } from "../utils/helpers.js";
 import { swords, weapons } from "../lists/weapons.js";
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
 
 export function magicItemsG() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	switch (n) {
 	case 1:
 	case 2:
@@ -22,7 +22,7 @@ export function magicItemsG() {
 	case 13:
 	case 14:
 		const str = "Figurine of wondrous power, ";
-		const c = rwn(8);
+		const c = randomWholeNumber(8);
 		switch (c) {
 		case 1:
 			return str + "Bronze griffon";
@@ -108,7 +108,7 @@ export function magicItemsG() {
 	case 47:
 		return "Horn of blasting";
 	case 48:
-		const s = rwn(75);
+		const s = randomWholeNumber(75);
 		if (s <= 40) return "Horn of Valhalla (silver)";
 		if (s <= 75) return "Horn of Valhalla (brass)";
 		break;

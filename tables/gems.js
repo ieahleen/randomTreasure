@@ -1,8 +1,8 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { ranArr } from "../utils/helpers.js";
 
 export function gems10() {
-	const y = rwn(12);
+	const y = randomWholeNumber(12);
 	switch (y) {
 	case 1:
 		return "Azurite (opaque mottled deep blue)";
@@ -46,7 +46,7 @@ export function gems10() {
 }
 
 export function gems50() {
-	const n = rwn(12);
+	const n = randomWholeNumber(12);
 	switch (n) {
 	case 1:
 		return "Bloodstone (opaque dark gray with red flecks)";
@@ -80,7 +80,7 @@ export function gems50() {
 }
 
 export function gems100() {
-	const n = rwn(10);
+	const n = randomWholeNumber(10);
 	switch (n) {
 	case 1:
 		return "Amber (transparent watery gold to rich gold)";
@@ -115,7 +115,7 @@ export function gems100() {
 }
 
 export function gems500 () {
-	const n = rwn(6);
+	const n = randomWholeNumber(6);
 	switch (n) {
 		case 1: return "Alexandrite (transparent dark green)";
 		case 2: return "Aquamarine (transparent pale blue-green)";
@@ -127,7 +127,7 @@ export function gems500 () {
 }
 
 export function gems1000 () {
-	const n = rwn(8);
+	const n = randomWholeNumber(8);
 	switch (n) {
 		case 1: return "Black opal (translucent dark green with black mottling and golden flecks)";
 		case 2: return "Blue sapphire (transparent blue-white to medium blue)";
@@ -141,7 +141,7 @@ export function gems1000 () {
 }
 
 export function gems5000 () {
-	const n = rwn(4);
+	const n = randomWholeNumber(4);
 	switch (n) {
 		case 1: return "Black sapphire (translucent lustruous black with glowing highlights)";
 		case 2: return `Diamond (transparent ${ranArr("blue-white", "canary", "pink", "brown", "blue")})`;

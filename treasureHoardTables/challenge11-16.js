@@ -1,4 +1,4 @@
-import { rwn } from "../utils/randomWholeNumber.js"
+import { randomWholeNumber } from "../utils/randomWholeNumber.js"
 import { numberCoins } from "../utils/numberOfCoins.js"
 import { objects } from "../utils/helpers.js"
 import { gems1000, gems500 } from "../tables/gems.js";
@@ -19,7 +19,7 @@ export function treasureG() {
         PP: numberCoins(5, 6, 100)
     }
 
-    const n = rwn(100);
+    const n = randomWholeNumber(100);
     // gems && objects
     if (n <= 3) {
         // nope

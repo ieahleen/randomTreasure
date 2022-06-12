@@ -1,4 +1,4 @@
-import { rwn } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { objects } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
 import { art25, art250 } from "../tables/artObjects.js";
@@ -12,7 +12,7 @@ import { magicItemsG } from "../tables/magicItemsG.js";
 import { magicItemsH } from "../tables/magicItemsH.js";
 
 export function treasureF() {
-	const n = rwn(100);
+	const n = randomWholeNumber(100);
 	const treasure = {};
 	treasure.CP = numberCoins(2, 6, 100);
 	treasure.SP = numberCoins(2, 6, 1000);
