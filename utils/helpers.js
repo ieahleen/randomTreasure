@@ -2,12 +2,15 @@ import { armors } from "../lists/other.js";
 import { spells1, spells2, spells3 } from "../lists/spells.js";
 import { swords } from "../lists/weapons.js";
 import { numberCoins } from "./numberOfCoins.js";
-import { rwn } from "./randomWholeNumber.js";
 import { gems100 } from "../tables/gems.js"
 
 export function ranArr(...arr) {
 	if (Array.isArray(arr[0])) arr = arr[0];
 	return arr[Math.floor(Math.random() * arr.length)];
+}
+
+export function randomWholeNumber(max) {
+	return Math.floor(Math.random() * max) + 1;
 }
   
 export function objects(num, die, table) {
