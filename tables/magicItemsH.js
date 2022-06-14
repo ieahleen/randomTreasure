@@ -1,5 +1,5 @@
-import { carpetSize, randomItemFromArray, randomAlignment, randomSword } from "../utils/helpers.js";
-import { weapons } from "../lists/weapons.js";
+import { carpetSize, randomItemFromArray, randomAlignment } from "../utils/helpers.js";
+import { swords, weapons } from "../lists/weapons.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
 
@@ -106,7 +106,7 @@ function magicItemsH() {
 	case 65:
 		return "Cloak of arachnida";
 	case 66:
-		return "Dancing sword, " + randomSword();
+		return "Dancing sword, " + randomItemFromArray(swords);
 	case 67:
 		return "Demon armor";
 	case 68:
@@ -120,7 +120,7 @@ function magicItemsH() {
 	case 72:
 		return "Figurine of wondrous power (obsidian steed)";
 	case 73:
-		return "Frost brand, " + randomSword();
+		return "Frost brand, " + randomItemFromArray(swords);
 	case 74:
 		return "Helm of brilliance";
 	case 75:
@@ -160,7 +160,7 @@ function magicItemsH() {
 	case 89:
 		return "Mirror of life trapping";
 	case 90:
-		return "Nine lives stealer, " + randomSword();
+		return "Nine lives stealer, " + randomItemFromArray(swords);
 	case 91:
 		return "Oathbow";
 	case 92:

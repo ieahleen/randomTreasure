@@ -1,7 +1,7 @@
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
-import { randomItemFromArray, randomArmor, randomPatches } from "../utils/helpers.js";
+import { randomItemFromArray randomPatches } from "../utils/helpers.js";
 import { spells2, spells3 } from "../lists/spells.js";
-import { damageTypes } from "../lists/other.js";
+import { armors, damageTypes } from "../lists/other.js";
 
 export function magicItemsB() {
 	const n = randomWholeNumber(100);
@@ -65,7 +65,7 @@ export function magicItemsB() {
 	case 91:
 		return "Lantern of revealing";
 	case 92:
-		return "Mariner's armor, " + randomArmor();
+		return "Mariner's armor, " + randomItemFromArray(armors);
 	case 93:
 		return "Mithral Armor";
 	case 94:

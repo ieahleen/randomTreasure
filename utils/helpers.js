@@ -60,14 +60,6 @@ export function carpetSize() {
 	if (n <= 100) return "6 ft. x 9 ft.";
 }
 
-export function randomSword() {
-	return randomItemFromArray(swords);
-}
-
-export function randomArmor() {
-	return randomItemFromArray(armors);
-}
-
 export function randomFeatherToken() {
 	const n = randomWholeNumber(100);
 	if (n <= 20) return "anchor";

@@ -1,4 +1,5 @@
-import { randomItemFromArray, randomSword } from "../utils/helpers.js";
+import { swords } from "../lists/weapons.js";
+import { randomItemFromArray } from "../utils/helpers.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function magicItemsI() {
@@ -8,7 +9,7 @@ export function magicItemsI() {
         case 2:
         case 3:
         case 4:
-        case 5: return "Defender, " + randomSword();
+        case 5: return "Defender, " + randomItemFromArray(swords);
         case 6:
         case 7:
         case 8:
@@ -18,7 +19,7 @@ export function magicItemsI() {
         case 12:
         case 13:
         case 14:
-        case 15: return "Luck blade, " + randomSword();
+        case 15: return "Luck blade, " + randomItemFromArray(swords);
         case 16:
         case 17:
         case 18:
@@ -26,7 +27,7 @@ export function magicItemsI() {
         case 20: return "Sword of answering";
         case 21:
         case 22:
-        case 23: return "Holy avenger, " + randomSword();
+        case 23: return "Holy avenger, " + randomItemFromArray(swords);
         case 24:
         case 25:
         case 26: return "Ring of djinni summoning";

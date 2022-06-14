@@ -1,4 +1,4 @@
-import { randomItemFromArray, randomSword } from "../utils/helpers.js";
+import { randomItemFromArray } from "../utils/helpers.js";
 import { swords, weapons } from "../lists/weapons.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
@@ -92,11 +92,11 @@ export function magicItemsG() {
 	case 39:
 		return "Dimensional shackles";
 	case 40:
-		return "Dragon slayer, " + randomSword();
+		return "Dragon slayer, " + randomItemFromArray(swords);
 	case 41:
 		return "Elven chain";
 	case 42:
-		return "Flame tongue, " + randomSword();
+		return "Flame tongue, " + randomItemFromArray(swords);
 	case 43:
 		return "Gem of seeing";
 	case 44:
@@ -202,9 +202,9 @@ export function magicItemsG() {
 	case 87:
 		return "Sun blade";
 	case 88:
-		return "Sword of life stealing, " + randomSword();
+		return "Sword of life stealing, " + randomItemFromArray(swords);
 	case 89:
-		return "Sword of wounding, " + randomSword();
+		return "Sword of wounding, " + randomItemFromArray(swords);
 	case 90:
 		return "Tentacle rod";
 	case 91:

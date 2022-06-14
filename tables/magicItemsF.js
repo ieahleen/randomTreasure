@@ -1,5 +1,5 @@
-import { weapons } from "../lists/weapons.js";
-import { randomItemFromArray, randomSword } from "../utils/helpers.js";
+import { swords, weapons } from "../lists/weapons.js";
+import { randomItemFromArray } from "../utils/helpers.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function magicItemsF() {
@@ -65,7 +65,7 @@ export function magicItemsF() {
 		return "Staff of the python";
 	case 54:
 	case 55:
-		return "Sword of vengeance, " + randomSword();
+		return "Sword of vengeance, " + randomItemFromArray(swords);
 	case 56:
 	case 57:
 		return "Trident of fish command";
