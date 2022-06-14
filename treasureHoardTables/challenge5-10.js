@@ -1,5 +1,5 @@
 import { randomWholeNumber } from "../utils/helpers.js";
-import { objects } from "../utils/helpers.js";
+import { listOfObjectsFromTable } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
 import { art25, art250 } from "../tables/artObjects.js";
 import { gems50, gems100 } from "../tables/gems.js";
@@ -28,7 +28,7 @@ export function treasureF() {
     (n >= 75 && n <= 76) ||
     (n >= 81 && n <= 84)
 	) {
-		treasure["25 gp art objects"] = objects(2, 4, art25);
+		treasure["25 gp art objects"] = listOfObjectsFromTable(2, 4, art25);
 	} else if (
 		(n >= 11 && n <= 16) ||
     (n >= 33 && n <= 36) ||
@@ -37,7 +37,7 @@ export function treasureF() {
     (n >= 77 && n <= 78) ||
     (n >= 85 && n <= 88)
 	) {
-		treasure["50 gp gems"] = objects(3, 6, gems50);
+		treasure["50 gp gems"] = listOfObjectsFromTable(3, 6, gems50);
 	} else if (
 		(n >= 17 && n <= 22) ||
     (n >= 37 && n <= 40) ||
@@ -48,7 +48,7 @@ export function treasureF() {
     (n >= 95 && n <= 96) ||
     n === 99
 	) {
-		treasure["100 gp gems"] = objects(3, 6, gems100);
+		treasure["100 gp gems"] = listOfObjectsFromTable(3, 6, gems100);
 	} else if (
 		(n >= 23 && n <= 28) ||
     (n >= 41 && n <= 44) ||
@@ -59,25 +59,25 @@ export function treasureF() {
     (n >= 97 && n <= 98) ||
     n === 100
 	) {
-		treasure["250 gp art objects"] = objects(2, 4, art250);
+		treasure["250 gp art objects"] = listOfObjectsFromTable(2, 4, art250);
 	}
 
 	if (n <= 28) {
 		// nothing
 	} else if (n <= 44) {
-		treasure["Magic Items"] = objects(1, 6, magicItemsA);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 6, magicItemsA);
 	} else if (n <= 63) {
-		treasure["Magic Items"] = objects(1, 4, magicItemsB);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 4, magicItemsB);
 	} else if (n <= 74) {
-		treasure["Magic Items"] = objects(1, 4, magicItemsC);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 4, magicItemsC);
 	} else if (n <= 80) {
-		treasure["Magic Items"] = objects(1, 1, magicItemsD);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 1, magicItemsD);
 	} else if (n <= 94) {
-		treasure["Magic Items"] = objects(1, 4, magicItemsF);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 4, magicItemsF);
 	} else if (n <= 98) {
-		treasure["Magic Items"] = objects(1, 4, magicItemsG);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 4, magicItemsG);
 	} else if (n <= 100) {
-		treasure["Magic Items"] = objects(1, 1, magicItemsH);
+		treasure["Magic Items"] = listOfObjectsFromTable(1, 1, magicItemsH);
 	}
 	return treasure;
 }

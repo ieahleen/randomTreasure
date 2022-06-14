@@ -13,17 +13,17 @@ export function randomWholeNumber(max) {
 	return Math.floor(Math.random() * max) + 1;
 }
   
-export function objects(num, die, table) {
-	let n = 0;
-	for (let i = 0; i < num; i++) {
-		n += randomWholeNumber(die);
+export function listOfObjectsFromTable(numberOfDice, typeOfDie, itemFromRandomTable) {
+	let numberOfItems = 0;
+	for (let i = 0; i < numberOfDice; i++) {
+		numberOfItems += randomWholeNumber(typeOfDie);
 	}
-	const arr = [];
-	for (let j = 0; j < n; j++) {
-		arr.push(table());
+	const listOfOutputObjects = [];
+	for (let j = 0; j < numberOfItems; j++) {
+		listOfOutputObjects.push(itemFromRandomTable());
 	}
   
-	return arr;
+	return listOfOutputObjects;
 }
 
 export function randomAlignment() {

@@ -1,6 +1,6 @@
 import { randomWholeNumber } from "../utils/helpers.js"
 import { numberCoins } from "../utils/numberOfCoins.js"
-import { objects } from "../utils/helpers.js"
+import { listOfObjectsFromTable } from "../utils/helpers.js"
 import { gems1000, gems500 } from "../tables/gems.js";
 import { art250, art750 } from "../tables/artObjects.js"
 import { magicItemsA } from "../tables/magicItemsA.js";
@@ -31,7 +31,7 @@ export function treasureG() {
      || (n >= 79 && n <= 80)
      || (n >= 89 && n <= 90)
      || (n >= 97 && n <= 98)) {
-        treasure["500 gp gems"] = objects(3, 6, gems500);
+        treasure["500 gp gems"] = listOfObjectsFromTable(3, 6, gems500);
     } else if (
         (n >= 13 && n <= 15)
         || (n >= 27 && n <= 29)
@@ -42,7 +42,7 @@ export function treasureG() {
         || (n >= 91 && n <= 92)
         || (n >= 99 && n <= 100)
     ) {
-        treasure["1000 gp gems"] = objects(3,6,gems1000)
+        treasure["1000 gp gems"] = listOfObjectsFromTable(3,6,gems1000)
     } else if (
         (n >= 4 && n <= 6)
         || (n >= 16 && n <= 19)
@@ -53,9 +53,9 @@ export function treasureG() {
         || (n >= 83 && n <= 85)
         || (n >= 93 && n <= 94)
     ) {
-        treasure["250 gp art objects"] = objects(2,4, art250);
+        treasure["250 gp art objects"] = listOfObjectsFromTable(2,4, art250);
     } else {
-        treasure["750 gp art objects"] = objects(2,4,art750);
+        treasure["750 gp art objects"] = listOfObjectsFromTable(2,4,art750);
     }
 
     // magit items
@@ -63,19 +63,19 @@ export function treasureG() {
     if (n <= 15) {
         // nope
     } else if (n <= 29) {
-        treasure["Magic Items"] = objects(1,4,magicItemsA).concat(objects(1,6,magicItemsB));
+        treasure["Magic Items"] = listOfObjectsFromTable(1,4,magicItemsA).concat(listOfObjectsFromTable(1,6,magicItemsB));
     } else if (n <= 50) {
-        treasure["Magic Items"] = objects(1,6,magicItemsC);
+        treasure["Magic Items"] = listOfObjectsFromTable(1,6,magicItemsC);
     } else if (n <= 66) {
-        treasure["Magic Items"] = objects(1,4,magicItemsD);
+        treasure["Magic Items"] = listOfObjectsFromTable(1,4,magicItemsD);
     } else if (n <= 74) {
-        treasure["Magic Items"] = objects(1,1,magicItemsE);
+        treasure["Magic Items"] = listOfObjectsFromTable(1,1,magicItemsE);
     } else if (n <= 82) {
-        treasure["Magic Items"] = objects(1,1,magicItemsF).concat(objects(1,4,magicItemsG));
+        treasure["Magic Items"] = listOfObjectsFromTable(1,1,magicItemsF).concat(listOfObjectsFromTable(1,4,magicItemsG));
     } else if (n <= 92) {
-        treasure["Magic Items"] = objects(1,4,magicItemsH);
+        treasure["Magic Items"] = listOfObjectsFromTable(1,4,magicItemsH);
     } else {
-        treasure["Magic Items"] = objects(1,1,magicItemsI);
+        treasure["Magic Items"] = listOfObjectsFromTable(1,1,magicItemsI);
     }
     
     return treasure;
