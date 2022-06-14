@@ -1,4 +1,4 @@
-import { randomWholeNumber } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/helpers.js";
 import { objects } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
 import { art25, art250 } from "../tables/artObjects.js";

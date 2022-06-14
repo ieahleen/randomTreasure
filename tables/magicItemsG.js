@@ -1,6 +1,6 @@
 import { randomItemFromArray } from "../utils/helpers.js";
 import { swords, weapons } from "../lists/weapons.js";
-import { randomWholeNumber } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/helpers.js";
 import { damageTypes } from "../lists/other.js";
 
 export function magicItemsG() {

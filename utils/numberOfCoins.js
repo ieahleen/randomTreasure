@@ -1,4 +1,4 @@
-import {randomWholeNumber} from "./randomWholeNumber.js";
+import {randomWholeNumber} from "./helpers.js";
 
 export function numberCoins(n, d, m) {
 	let c = 1;

@@ -1,5 +1,4 @@
-import { randomWholeNumber } from "../utils/randomWholeNumber.js";
-import { randomItemFromArray } from "../utils/helpers.js";
+import { randomItemFromArray, randomWholeNumber } from "../utils/helpers.js";
 
 export function gems10() {
 	const y = randomWholeNumber(12);

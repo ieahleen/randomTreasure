@@ -7,7 +7,7 @@ import { magicItemsB } from "../tables/magicItemsB.js";
 import { magicItemsC } from "../tables/magicItemsC.js";
 import { magicItemsF } from "../tables/magicItemsF.js";
 import { magicItemsG } from "../tables/magicItemsG.js";
-import { randomWholeNumber } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/helpers.js";
 
 export function treasureE () {
 	const treasure = {

@@ -8,7 +8,7 @@ import { magicItemsH } from "../tables/magicItemsH.js";
 import { magicItemsI } from "../tables/magicItemsI.js";
 import { objects } from "../utils/helpers.js";
 import { numberCoins } from "../utils/numberOfCoins.js";
-import { randomWholeNumber } from "../utils/randomWholeNumber.js";
+import { randomWholeNumber } from "../utils/helpers.js";
 
 export function treasureH () {
     const treasure = {};
