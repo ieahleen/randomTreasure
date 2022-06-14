@@ -1,4 +1,4 @@
-import { carpetSize, ranArr, randomAlignment, randomSword } from "../utils/helpers.js";
+import { carpetSize, randomItemFromArray, randomAlignment, randomSword } from "../utils/helpers.js";
 import { weapons } from "../lists/weapons.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
@@ -16,7 +16,7 @@ function magicItemsH() {
 	case 8:
 	case 9:
 	case 10:
-		return `Weapon, +3 ${ranArr(weapons)}`;
+		return `Weapon, +3 ${randomItemFromArray(weapons)}`;
 	case 11:
 	case 12:
 		return "Amulet of the planes";
@@ -76,7 +76,7 @@ function magicItemsH() {
 		return "Staff of thunder and lightning";
 	case 49:
 	case 50:
-		return "Sword of sharpness, " + ranArr("longsword", "scimitar", "greatsword");
+		return "Sword of sharpness, " + randomItemFromArray("longsword", "scimitar", "greatsword");
 	case 51:
 	case 52:
 		return "Wand of polymorph";
@@ -92,11 +92,11 @@ function magicItemsH() {
 	case 58:
 		return "Belt of fire giant strength";
 	case 59:
-		return `Belt of ${ranArr("frost", "stone")} giant strength`;
+		return `Belt of ${randomItemFromArray("frost", "stone")} giant strength`;
 	case 60:
 		return "Armor, +1 breastplate";
 	case 61:
-		return "Armor of resistance (breastplate), " + ranArr(damageTypes);
+		return "Armor of resistance (breastplate), " + randomItemFromArray(damageTypes);
 	case 62:
 		return "Candle of invocation, " + randomAlignment();
 	case 63:
@@ -170,11 +170,11 @@ function magicItemsH() {
 	case 94:
 		return "Armor +1, splint";
 	case 95:
-		return  "Armor of resistance (splint), " + ranArr(damageTypes);
+		return  "Armor of resistance (splint), " + randomItemFromArray(damageTypes);
 	case 96:
 		return "Armor, +1 studded leather";
 	case 97:
-		return "Armor or resistance (studded leather), " + ranArr(damageTypes);
+		return "Armor or resistance (studded leather), " + randomItemFromArray(damageTypes);
 	case 98:
 		return "Tome of clear thought";
 	case 99:

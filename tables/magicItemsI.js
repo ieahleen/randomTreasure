@@ -1,4 +1,4 @@
-import { ranArr, randomSword } from "../utils/helpers.js";
+import { randomItemFromArray, randomSword } from "../utils/helpers.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function magicItemsI() {
@@ -44,7 +44,7 @@ export function magicItemsI() {
         case 38: return "Staff of the magi";
         case 39:
         case 40:
-        case 41: return "Vorpal sword, " + ranArr("longsword", "scimitar", "greatsword");
+        case 41: return "Vorpal sword, " + randomItemFromArray("longsword", "scimitar", "greatsword");
         case 42:
         case 43: return "Belt of cloud giant strength";
         case 44:
@@ -56,7 +56,7 @@ export function magicItemsI() {
         case 50:
         case 51: return "Cloak of invisibility";
         case 52:
-        case 53: return "Crystal ball of " + ranArr("Mind Reading", "Telepathy", "True Seeing");
+        case 53: return "Crystal ball of " + randomItemFromArray("Mind Reading", "Telepathy", "True Seeing");
         case 54:
         case 55: return "Armor, +1 half plate";
         case 56:
@@ -102,14 +102,14 @@ export function magicItemsI() {
             case 80: return "Cubic gate";
             case 81: return "Deck of many things";
             case 82: return "Efreeti chain";
-            case 83: return "Armor of resistance, " + ranArr(damageTypes);
+            case 83: return "Armor of resistance, " + randomItemFromArray(damageTypes);
             case 84: return "Horn of Valhalla (iron)";
             case 85: return "Instrument of the bards (Ollamh harp";
             case 86: return "Ioun stone (greater absorption";
             case 87: return "Ioun stone (mastery)";
             case 88: return "Ioun stone (regeneration)";
             case 89: return "Plate armor of etheralness";
-            case 90: return "Plate armor of resistance, " + ranArr(damageTypes);
+            case 90: return "Plate armor of resistance, " + randomItemFromArray(damageTypes);
             case 91: return "Ring of air elemental command";
             case 92: return "Ring of earth elemental command";
             case 93: return "Ring of fire elemental command";

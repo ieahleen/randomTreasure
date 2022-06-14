@@ -1,4 +1,4 @@
-import { ranArr, randomSword } from "../utils/helpers.js";
+import { randomItemFromArray, randomSword } from "../utils/helpers.js";
 import { swords, weapons } from "../lists/weapons.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { damageTypes } from "../lists/other.js";
@@ -17,7 +17,7 @@ export function magicItemsG() {
 	case 9:
 	case 10:
 	case 11:
-		return `Weapon, +2 ${ranArr(weapons)}`;
+		return `Weapon, +2 ${randomItemFromArray(weapons)}`;
 	case 12:
 	case 13:
 	case 14:
@@ -74,11 +74,11 @@ export function magicItemsG() {
 	case 30:
 		return "Armor, +1 chain mail";
 	case 31:
-		return "Armor of resistance (chain mail), " + ranArr(damageTypes);
+		return "Armor of resistance (chain mail), " + randomItemFromArray(damageTypes);
 	case 32:
 		return "Armor, +1 (chain shirt)";
 	case 33:
-		return "Armor of resistance (chain shirt), " + ranArr(damageTypes);
+		return "Armor of resistance (chain shirt), " + randomItemFromArray(damageTypes);
 	case 34:
 		return "Cloak of displacement";
 	case 35:
@@ -100,7 +100,7 @@ export function magicItemsG() {
 	case 43:
 		return "Gem of seeing";
 	case 44:
-		return "Giant slayer, " + ranArr(...swords, battleaxe, handaxe);
+		return "Giant slayer, " + randomItemFromArray(...swords, battleaxe, handaxe);
 	case 45:
 		return "Glamoured studded leather";
 	case 46:
@@ -129,7 +129,7 @@ export function magicItemsG() {
 	case 56:
 		return "Armor, +1 leather";
 	case 57:
-		return "Armor of resistance (leather), " + ranArr(damageTypes);
+		return "Armor of resistance (leather), " + randomItemFromArray(damageTypes);
 	case 58:
 		return "Mace of disruption";
 	case 59:
@@ -153,7 +153,7 @@ export function magicItemsG() {
 	case 68:
 		return "Ring of protection";
 	case 69:
-		return "Ring of resistance, " + ranArr(damageTypes);
+		return "Ring of resistance, " + randomItemFromArray(damageTypes);
 	case 70:
 		return "Ring of spell storing";
 	case 71:
@@ -171,7 +171,7 @@ export function magicItemsG() {
 	case 77:
 		return "Armor, +1 scale mail";
 	case 78:
-		return `Armor of resistance (scale mail), ${ranArr(
+		return `Armor of resistance (scale mail), ${randomItemFromArray(
 			"Acid",
 			"Cold",
 			"Fire",
@@ -208,7 +208,7 @@ export function magicItemsG() {
 	case 90:
 		return "Tentacle rod";
 	case 91:
-		return "Vicious weapon, " + ranArr(weapons);
+		return "Vicious weapon, " + randomItemFromArray(weapons);
 	case 92:
 		return "Wand of binding";
 	case 93:

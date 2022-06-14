@@ -1,13 +1,13 @@
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 import { spells4, spells5 } from "../lists/spells.js";
-import { ranArr, randomFeatherToken, randomProtection } from "../utils/helpers.js";
+import { randomItemFromArray, randomFeatherToken, randomProtection } from "../utils/helpers.js";
 
 export function magicItemsC() {
 	const n = randomWholeNumber(100);
 	if (n <= 15) return "Potion of superior healing";
-	if (n <= 22) return `${ranArr(spells4)} spell scroll (4th level)`;
+	if (n <= 22) return `${randomItemFromArray(spells4)} spell scroll (4th level)`;
 	if (n <= 27)
-		return `Ammunition, +2 ${ranArr(
+		return `Ammunition, +2 ${randomItemFromArray(
 			"arrow",
 			"blowgun needle",
 			"crossbow bolt",
@@ -21,7 +21,7 @@ export function magicItemsC() {
 	if (n <= 57) return "Potion of heroism";
 	if (n <= 62) return "Potion of invulnerability";
 	if (n <= 67) return "Potion of mind reading";
-	if (n <= 72) return `${ranArr(spells5)} spell scroll (5th level)`;
+	if (n <= 72) return `${randomItemFromArray(spells5)} spell scroll (5th level)`;
 	switch (n) {
 	case 73:
 	case 74:

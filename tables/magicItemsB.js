@@ -1,5 +1,5 @@
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
-import { ranArr, randomArmor, randomPatches } from "../utils/helpers.js";
+import { randomItemFromArray, randomArmor, randomPatches } from "../utils/helpers.js";
 import { spells2, spells3 } from "../lists/spells.js";
 import { damageTypes } from "../lists/other.js";
 
@@ -7,9 +7,9 @@ export function magicItemsB() {
 	const n = randomWholeNumber(100);
 	if (n <= 15) return "Potion of greater healing";
 	if (n <= 22) return "Potion of fire breath";
-	if (n <= 29) return "Potion of resistance, " + ranArr(damageTypes)
+	if (n <= 29) return "Potion of resistance, " + randomItemFromArray(damageTypes)
 	if (n <= 34)
-		return `Ammunition, +1 ${ranArr(
+		return `Ammunition, +1 ${randomItemFromArray(
 			"arrow",
 			"blowgun needle",
 			"crossbow bolt",
@@ -19,8 +19,8 @@ export function magicItemsB() {
 	if (n <= 44) return "Potion of hill giant strength";
 	if (n <= 49) return "Potion of growth";
 	if (n <= 54) return "Potion of water breathing";
-	if (n <= 59) return `${ranArr(spells2)} spell scroll (2nd level)`;
-	if (n <= 64) return `${ranArr(spells3)} spell scroll (3rd level)`;
+	if (n <= 59) return `${randomItemFromArray(spells2)} spell scroll (2nd level)`;
+	if (n <= 64) return `${randomItemFromArray(spells3)} spell scroll (3rd level)`;
 	if (n <= 67) return "Bag of Holding";
 	if (n <= 70) return "Keoghtom's ointment";
 	switch (n) {
@@ -39,7 +39,7 @@ export function magicItemsB() {
 		return "Dust of sneezing and chocking";
 	case 80:
 	case 81:
-		return `Elemental ${ranArr(
+		return `Elemental ${randomItemFromArray(
 			"blue sapphire",
 			"yellow diamond",
 			"red corundum",

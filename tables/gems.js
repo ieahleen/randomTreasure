@@ -1,5 +1,5 @@
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
-import { ranArr } from "../utils/helpers.js";
+import { randomItemFromArray } from "../utils/helpers.js";
 
 export function gems10() {
 	const y = randomWholeNumber(12);
@@ -7,7 +7,7 @@ export function gems10() {
 	case 1:
 		return "Azurite (opaque mottled deep blue)";
 	case 2:
-		return `Banded agate (translucent striped ${ranArr(
+		return `Banded agate (translucent striped ${randomItemFromArray(
 			"brown",
 			"blue",
 			"white",
@@ -16,7 +16,7 @@ export function gems10() {
 	case 3:
 		return "Blue quartz (transparent pale blue)";
 	case 4:
-		return `Eye agate (translucent circles of ${ranArr(
+		return `Eye agate (translucent circles of ${randomItemFromArray(
 			"gray",
 			"white",
 			"brown",
@@ -30,10 +30,10 @@ export function gems10() {
 	case 7:
 		return "Malachite (opaque striated light and dark green)";
 	case 8:
-		return `Moss agate (translucent ${ranArr(
+		return `Moss agate (translucent ${randomItemFromArray(
 			"pink",
 			"yellow-white"
-		)} with ${ranArr("mossy gray", "green")} markings)`;
+		)} with ${randomItemFromArray("mossy gray", "green")} markings)`;
 	case 9:
 		return "Obsidian (opaque black)";
 	case 10:
@@ -59,17 +59,17 @@ export function gems50() {
 	case 5:
 		return "Citrine (transparent pale yellow-brown)";
 	case 6:
-		return `Jasper (opaque ${ranArr("blue", "black", "brown")})`;
+		return `Jasper (opaque ${randomItemFromArray("blue", "black", "brown")})`;
 	case 7:
 		return "Moonstone (translucent white with pale blue glow)";
 	case 8:
-		return `Onyx (opaque bands of ${ranArr(
+		return `Onyx (opaque bands of ${randomItemFromArray(
 			"black and white",
 			"pure black",
 			"pure white"
 		)})`;
 	case 9:
-		return `Quartz (transparent ${ranArr("white", "smoky gray", "yellow")})`;
+		return `Quartz (transparent ${randomItemFromArray("white", "smoky gray", "yellow")})`;
 	case 10:
 		return "Sardonyx (opaque bands of red and white)";
 	case 11:
@@ -91,9 +91,9 @@ export function gems100() {
 	case 4:
 		return "Coral (opaque crimson)";
 	case 5:
-		return `Garnet (transparent ${ranArr("red", "brown-green", "violet")})`;
+		return `Garnet (transparent ${randomItemFromArray("red", "brown-green", "violet")})`;
 	case 6:
-		return `Jade (transparent ${ranArr(
+		return `Jade (transparent ${randomItemFromArray(
 			"light green",
 			"deep green",
 			"white"
@@ -101,11 +101,11 @@ export function gems100() {
 	case 7:
 		return "Jet (opaque deep black)";
 	case 8:
-		return `Pearl (opaque lustruous ${ranArr("white", "yellow", "pink")})`;
+		return `Pearl (opaque lustruous ${randomItemFromArray("white", "yellow", "pink")})`;
 	case 9:
-		return `Spinel (transparent ${ranArr("red", "red-brown", "deep green")})`;
+		return `Spinel (transparent ${randomItemFromArray("red", "red-brown", "deep green")})`;
 	case 10:
-		return `Tourmaline (transparent ${ranArr(
+		return `Tourmaline (transparent ${randomItemFromArray(
 			"pale green",
 			"blue",
 			"brown",
@@ -136,7 +136,7 @@ export function gems1000 () {
 		case 5: return "Opal (translucent pale blue with green and golden mottling)";
 		case 6: return "Star ruby (translucent ruby with white star-shaped center)";
 		case 7: return "Star sapphire (translucent blue sapphire with white star-shaped center)";
-		case 8: return `Yellow sapphire (transparent ${ranArr("fiery yellow", "yellow-green")})`;
+		case 8: return `Yellow sapphire (transparent ${randomItemFromArray("fiery yellow", "yellow-green")})`;
 	}
 }
 
@@ -144,7 +144,7 @@ export function gems5000 () {
 	const n = randomWholeNumber(4);
 	switch (n) {
 		case 1: return "Black sapphire (translucent lustruous black with glowing highlights)";
-		case 2: return `Diamond (transparent ${ranArr("blue-white", "canary", "pink", "brown", "blue")})`;
+		case 2: return `Diamond (transparent ${randomItemFromArray("blue-white", "canary", "pink", "brown", "blue")})`;
 		case 3: return "Jacinth (transparent fiery orange)";
 		case 4: return "Ruby (transparent clear red to deep crimson)";
 	}

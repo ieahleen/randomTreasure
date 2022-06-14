@@ -4,7 +4,7 @@ import { swords } from "../lists/weapons.js";
 import { numberCoins } from "./numberOfCoins.js";
 import { gems100 } from "../tables/gems.js"
 
-export function ranArr(...arr) {
+export function randomItemFromArray(...arr) {
 	if (Array.isArray(arr[0])) arr = arr[0];
 	return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -61,11 +61,11 @@ export function carpetSize() {
 }
 
 export function randomSword() {
-	return ranArr(swords);
+	return randomItemFromArray(swords);
 }
 
 export function randomArmor() {
-	return ranArr(armors);
+	return randomItemFromArray(armors);
 }
 
 export function randomFeatherToken() {
@@ -91,9 +91,9 @@ function randomPatch() {
 	if (n <= 75) return "Rowboat 12 ft.";
 	if (n <= 83) {
 		const f = randomWholeNumber(6);
-		if (n <= 3) return `${ranArr(spells1)} spell scroll (1st level)`;
-		if (n <= 5) return `${ranArr(spells2)} spell scroll (2nd level)`;
-		if (n <= 6)return `${ranArr(spells3)} spell scroll (3rd level)`;
+		if (n <= 3) return `${randomItemFromArray(spells1)} spell scroll (1st level)`;
+		if (n <= 5) return `${randomItemFromArray(spells2)} spell scroll (2nd level)`;
+		if (n <= 6)return `${randomItemFromArray(spells3)} spell scroll (3rd level)`;
 	} 
 	if (n <= 90) return "2 mastiffs";
 	if (n <= 96) return "Window (2 ft. x 4 ft. and up to 2 feet deep)";

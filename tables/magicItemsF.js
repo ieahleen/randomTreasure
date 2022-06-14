@@ -1,11 +1,11 @@
 import { weapons } from "../lists/weapons.js";
-import { ranArr, randomSword } from "../utils/helpers.js";
+import { randomItemFromArray, randomSword } from "../utils/helpers.js";
 import { randomWholeNumber } from "../utils/randomWholeNumber.js";
 
 export function magicItemsF() {
 	const n = randomWholeNumber(100);
   
-	if (n <= 15) return `Weapon, +1 ${ranArr(weapons)}`;
+	if (n <= 15) return `Weapon, +1 ${randomItemFromArray(weapons)}`;
 	switch (n) {
 	case 16:
 	case 17:
@@ -80,7 +80,7 @@ export function magicItemsF() {
 		return "Wand of web";
 	case 64:
 	case 65:
-		return "Weapon of warning, " + ranArr(weapons);
+		return "Weapon of warning, " + randomItemFromArray(weapons);
 	case 66:
 		return "Adamantine armor (chain mail)";
 	case 67:
