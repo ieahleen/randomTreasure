@@ -17,7 +17,7 @@ import { magicItemsG } from "../tables/magicItemsG.js";
 import { magicItemsH } from "../tables/magicItemsH.js";
 import { magicItemsI } from "../tables/magicItemsI.js";
 
-const randomGem = randomRangeSelection([
+const randomSellable = randomRangeSelection([
   [[1, 3]],
   () => ({}),
   [
@@ -95,7 +95,7 @@ const randomItem = randomItemFromTable({
 export function treasureG() {
   const die = randomWholeNumber(100);
   console.log(die);
-  const treasure = randomGem(die);
+  const treasure = randomSellable(die);
   return {
     GP: numberCoins(4, 6, 1000),
     PP: numberCoins(5, 6, 100),
