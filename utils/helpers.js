@@ -62,7 +62,7 @@ export function listOfObjectsFromTable(
 }
 
 export function randomAlignment() {
-  const n = randomWholeNumber(n);
+  const n = randomWholeNumber(20);
   switch (n) {
     case 1:
     case 2:

@@ -56,7 +56,7 @@ const randomSellable = randomRangeSelection([
   () => ({ "750 gp gems": listOfObjectsFromTable(2, 4, art750) }), // else / default case
 ]);
 
-const randomItem = randomItemFromTable({
+const randomMagicItem = randomItemFromTable({
   15: (v) => v,
   29: (v) => ({
     ...v,
@@ -88,17 +88,16 @@ const randomItem = randomItemFromTable({
   }),
   100: (v) => ({
     ...v,
-    "Magix Items": listOfObjectsFromTable(1, 1, magicItemsI),
+    "Magic Items": listOfObjectsFromTable(1, 1, magicItemsI),
   }),
 });
 
 export function treasureG() {
   const die = randomWholeNumber(100);
-  console.log(die);
   const treasure = randomSellable(die);
   return {
     GP: numberCoins(4, 6, 1000),
     PP: numberCoins(5, 6, 100),
-    ...randomItem(die, treasure),
+    ...randomMagicItem(die, treasure),
   };
 }
