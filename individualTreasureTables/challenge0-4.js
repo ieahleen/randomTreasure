@@ -1,20 +1,26 @@
-import { randomWholeNumber } from "../utils/helpers.js";
-import { numberCoins } from "../utils/numberOfCoins.js";
+import { numberCoins } from '../utils/numberOfCoins.js';
+import { randomItemFromTable } from '../utils/helpers.js';
+import { randomWholeNumber } from '../utils/helpers.js';
+
+const randomTreasure = {
+  30: () => ({
+    CP: numberCoins(5, 6, 1),
+  }),
+  60: () => ({
+    SP: numberCoins(4, 6, 1),
+  }),
+  70: () => ({
+    EP: numberCoins(3, 6, 1),
+  }),
+  95: () => ({
+    GP: numberCoins(3, 6, 1),
+  }),
+  100: () => ({
+    PP: numberCoins(1, 6, 1),
+  }),
+};
 
 export function treasureA() {
-	const t = randomWholeNumber(100);
-	const treasure = {};
-	if (t <= 30) {
-		treasure.CP = numberCoins(5, 6, 1);
-	} else if (t <= 60) {
-		treasure.SP = numberCoins(4, 6, 1);
-	} else if (t <= 70) {
-		treasure.EP = numberCoins(3, 6, 1);
-	} else if (t <= 95) {
-		treasure.GP = numberCoins(3, 6, 1);
-	} else {
-		treasure.PP = numberCoins(1, 6, 1);
-	}
-  
-	return treasure;
+  console.log('treasureA is called');
+  return randomItemFromTable(randomTreasure)(randomWholeNumber(100), {});
 }
