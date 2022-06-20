@@ -1,10 +1,10 @@
 import {
+  numberOfCoins,
   randomItemFromTable,
   randomRangeSelection,
   randomWholeNumber,
 } from '../utils/helpers.js';
 import { listOfObjectsFromTable } from '../utils/helpers.js';
-import { numberCoins } from '../utils/numberOfCoins.js';
 import { art25, art250 } from '../tables/artObjects.js';
 import { gems50, gems100 } from '../tables/gems.js';
 import { magicItemsA } from '../tables/magicItemsA.js';
@@ -92,10 +92,10 @@ export function treasureF() {
   const die = randomWholeNumber(100);
   const treasure = randomSellable(die);
   return {
-    CP: numberCoins(2, 6, 100),
-    SP: numberCoins(2, 6, 1000),
-    GP: numberCoins(6, 6, 100),
-    PP: numberCoins(3, 6, 10),
+    CP: numberOfCoins(2, 6, 100),
+    SP: numberOfCoins(2, 6, 1000),
+    GP: numberOfCoins(6, 6, 100),
+    PP: numberOfCoins(3, 6, 10),
     ...randomMagicItem(die, treasure),
   };
 }

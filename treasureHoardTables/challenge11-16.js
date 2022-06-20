@@ -1,21 +1,20 @@
-import { randomWholeNumber } from "../utils/helpers.js";
-import { numberCoins } from "../utils/numberOfCoins.js";
+import { numberOfCoins, randomWholeNumber } from '../utils/helpers.js';
 import {
   listOfObjectsFromTable,
   randomRangeSelection,
   randomItemFromTable,
-} from "../utils/helpers.js";
-import { gems1000, gems500 } from "../tables/gems.js";
-import { art250, art750 } from "../tables/artObjects.js";
-import { magicItemsA } from "../tables/magicItemsA.js";
-import { magicItemsB } from "../tables/magicItemsB.js";
-import { magicItemsC } from "../tables/magicItemsC.js";
-import { magicItemsD } from "../tables/magicItemsD.js";
-import { magicItemsE } from "../tables/magicItemsE.js";
-import { magicItemsF } from "../tables/magicItemsF.js";
-import { magicItemsG } from "../tables/magicItemsG.js";
-import { magicItemsH } from "../tables/magicItemsH.js";
-import { magicItemsI } from "../tables/magicItemsI.js";
+} from '../utils/helpers.js';
+import { gems1000, gems500 } from '../tables/gems.js';
+import { art250, art750 } from '../tables/artObjects.js';
+import { magicItemsA } from '../tables/magicItemsA.js';
+import { magicItemsB } from '../tables/magicItemsB.js';
+import { magicItemsC } from '../tables/magicItemsC.js';
+import { magicItemsD } from '../tables/magicItemsD.js';
+import { magicItemsE } from '../tables/magicItemsE.js';
+import { magicItemsF } from '../tables/magicItemsF.js';
+import { magicItemsG } from '../tables/magicItemsG.js';
+import { magicItemsH } from '../tables/magicItemsH.js';
+import { magicItemsI } from '../tables/magicItemsI.js';
 
 const randomSellable = randomRangeSelection([
   [[1, 3]],
@@ -30,7 +29,7 @@ const randomSellable = randomRangeSelection([
     [89, 90],
     [97, 98],
   ],
-  () => ({ "500 gp gems": listOfObjectsFromTable(3, 6, gems500) }),
+  () => ({ '500 gp gems': listOfObjectsFromTable(3, 6, gems500) }),
   [
     [13, 15],
     [27, 29],
@@ -41,7 +40,7 @@ const randomSellable = randomRangeSelection([
     [91, 92],
     [99, 100],
   ],
-  () => ({ "1000 gp gems": listOfObjectsFromTable(3, 6, gems1000) }),
+  () => ({ '1000 gp gems': listOfObjectsFromTable(3, 6, gems1000) }),
   [
     [4, 6],
     [16, 10],
@@ -52,43 +51,43 @@ const randomSellable = randomRangeSelection([
     [83, 85],
     [93, 94],
   ],
-  () => ({ "250 gp art objects": listOfObjectsFromTable(2, 4, art250) }),
-  () => ({ "750 gp gems": listOfObjectsFromTable(2, 4, art750) }), // else / default case
+  () => ({ '250 gp art objects': listOfObjectsFromTable(2, 4, art250) }),
+  () => ({ '750 gp gems': listOfObjectsFromTable(2, 4, art750) }), // else / default case
 ]);
 
 const randomMagicItem = randomItemFromTable({
   15: (v) => v,
   29: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 4, magicItemsA).concat(
+    'Magic Items': listOfObjectsFromTable(1, 4, magicItemsA).concat(
       listOfObjectsFromTable(1, 6, magicItemsB)
     ),
   }),
   50: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 6, magicItemsC),
+    'Magic Items': listOfObjectsFromTable(1, 6, magicItemsC),
   }),
   66: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 4, magicItemsD),
+    'Magic Items': listOfObjectsFromTable(1, 4, magicItemsD),
   }),
   74: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 4, magicItemsE),
+    'Magic Items': listOfObjectsFromTable(1, 4, magicItemsE),
   }),
   82: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 1, magicItemsF).concat(
+    'Magic Items': listOfObjectsFromTable(1, 1, magicItemsF).concat(
       listOfObjectsFromTable(1, 4, magicItemsG)
     ),
   }),
   92: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 4, magicItemsH),
+    'Magic Items': listOfObjectsFromTable(1, 4, magicItemsH),
   }),
   100: (v) => ({
     ...v,
-    "Magic Items": listOfObjectsFromTable(1, 1, magicItemsI),
+    'Magic Items': listOfObjectsFromTable(1, 1, magicItemsI),
   }),
 });
 
@@ -96,8 +95,8 @@ export function treasureG() {
   const die = randomWholeNumber(100);
   const treasure = randomSellable(die);
   return {
-    GP: numberCoins(4, 6, 1000),
-    PP: numberCoins(5, 6, 100),
+    GP: numberOfCoins(4, 6, 1000),
+    PP: numberOfCoins(5, 6, 100),
     ...randomMagicItem(die, treasure),
   };
 }

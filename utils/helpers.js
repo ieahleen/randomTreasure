@@ -1,7 +1,4 @@
-import { armors } from '../lists/other.js';
 import { spells1, spells2, spells3 } from '../lists/spells.js';
-import { swords } from '../lists/weapons.js';
-import { numberCoins } from './numberOfCoins.js';
 import { gems100 } from '../tables/gems.js';
 
 export const randomItemFromTable =
@@ -156,7 +153,7 @@ function randomPatch() {
 }
 
 export function randomPatches() {
-  const n = numberCoins(4, 4, 1);
+  const n = numberOfCoins(4, 4, 1);
   const arr = [];
   for (let i = 1; i <= n; i++) {
     arr.push(randomPatch());
@@ -174,4 +171,12 @@ export function randomProtection() {
   if (n <= 75) return 'fiends';
   if (n <= 80) return 'plants';
   if (n <= 100) return 'undead';
+}
+
+export function numberOfCoins(n, d, m) {
+  let c = 1;
+  for (let i = 0; i < n; i++) {
+    c += randomWholeNumber(d);
+  }
+  return c * m;
 }
