@@ -7,7 +7,6 @@ import { gems100 } from '../tables/gems.js';
 export const randomItemFromTable =
   (dist) =>
   (num, ...args) => {
-    console.log('randomItemFromTable called');
     const keys = Object.keys(dist)
       .map((d) => parseInt(d))
       .sort((a, b) => a - b);
