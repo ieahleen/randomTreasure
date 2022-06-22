@@ -2,7 +2,7 @@ import { numberOfCoins, randomWholeNumber } from '../utils/helpers.js';
 import {
   listOfObjectsFromTable,
   randomRangeSelection,
-  randomItemFromTable,
+  randomItemFromTableCompound,
 } from '../utils/helpers.js';
 import { gems1000, gems500 } from '../tables/gems.js';
 import { art250, art750 } from '../tables/artObjects.js';
@@ -55,7 +55,7 @@ const randomSellable = randomRangeSelection([
   () => ({ '750 gp gems': listOfObjectsFromTable(2, 4, art750) }), // else / default case
 ]);
 
-const randomMagicItem = randomItemFromTable({
+const randomMagicItem = randomItemFromTableCompound({
   15: (v) => v,
   29: (v) => ({
     ...v,

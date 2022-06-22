@@ -1,6 +1,6 @@
 import {
   numberOfCoins,
-  randomItemFromTable,
+  randomItemFromTableCompound,
   randomRangeSelection,
   randomWholeNumber,
 } from '../utils/helpers.js';
@@ -56,7 +56,7 @@ const randomSellable = randomRangeSelection([
   }),
 ]);
 
-const randomMagicItem = randomItemFromTable({
+const randomMagicItem = randomItemFromTableCompound({
   28: (v) => v,
   44: (v) => ({
     ...v,

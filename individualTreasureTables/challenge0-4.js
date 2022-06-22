@@ -1,4 +1,7 @@
-import { numberOfCoins, randomItemFromTable } from '../utils/helpers.js';
+import {
+  numberOfCoins,
+  randomItemFromTableCompound,
+} from '../utils/helpers.js';
 import { randomWholeNumber } from '../utils/helpers.js';
 
 const randomTreasure = {
@@ -20,5 +23,8 @@ const randomTreasure = {
 };
 
 export function treasureA() {
-  return randomItemFromTable(randomTreasure)(randomWholeNumber(100), {});
+  return randomItemFromTableCompound(randomTreasure)(
+    randomWholeNumber(100),
+    {}
+  );
 }

@@ -1,9 +1,21 @@
 import { spells1, spells2, spells3 } from '../lists/spells.js';
 import { gems100 } from '../tables/gems.js';
 
-export const randomItemFromTable =
+export const randomItemFromTableCompound =
   (dist) =>
   (num, ...args) => {
+    const keys = Object.keys(dist)
+      .map((d) => parseInt(d))
+      .sort((a, b) => a - b);
+    const key = keys.find((key) => num <= key);
+    const result = dist[key];
+    return typeof result === 'function' ? result(...args) : result;
+  };
+
+const randomItemFromTable =
+  (maxDie, dist) =>
+  (...args) => {
+    const num = rwn(maxDie);
     const keys = Object.keys(dist)
       .map((d) => parseInt(d))
       .sort((a, b) => a - b);
@@ -103,7 +115,7 @@ const carpetSizeDefinition = [
   },
 ];
 
-export const carpetSize = randomItemFromTable(...carpetSizeDefinition);
+export const carpetSize = randomItemFromTableCompound(...carpetSizeDefinition);
 
 export function randomFeatherToken() {
   const n = randomWholeNumber(100);
