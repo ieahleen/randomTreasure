@@ -1,4 +1,4 @@
-import { numberOfCoins, randomWholeNumber } from '../utils/helpers.js';
+import { diceThrow, randomWholeNumber } from '../utils/helpers.js';
 import {
   listOfObjectsFromTable,
   randomRangeSelection,
@@ -95,8 +95,8 @@ export function treasureG() {
   const die = randomWholeNumber(100);
   const treasure = randomSellable(die);
   return {
-    GP: numberOfCoins(4, 6, 1000),
-    PP: numberOfCoins(5, 6, 100),
+    GP: diceThrow(4, 6, 1000),
+    PP: diceThrow(5, 6, 100),
     ...randomMagicItem(die, treasure),
   };
 }

@@ -154,7 +154,7 @@ const randomPatchDefinition = [
 const randomPatch = randomItemFromTable(...randomPatchDefinition);
 
 export function randomPatches() {
-  const n = numberOfCoins(4, 4, 1);
+  const n = diceThrow(4, 4);
   const arr = [];
   for (let i = 1; i <= n; i++) {
     arr.push(randomPatch());
@@ -174,10 +174,10 @@ export function randomProtection() {
   if (n <= 100) return 'undead';
 }
 
-export function numberOfCoins(n, d, m) {
-  let c = 1;
-  for (let i = 0; i < n; i++) {
-    c += randomWholeNumber(d);
+export function diceThrow(numberOfDice, typeOfDice, multiplier = 1) {
+  let result = 1;
+  for (let i = 0; i < numberOfDice; i++) {
+    output += randomWholeNumber(typeOfDice);
   }
-  return c * m;
+  return output * multiplier;
 }

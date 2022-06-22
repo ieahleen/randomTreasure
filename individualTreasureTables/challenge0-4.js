@@ -1,24 +1,21 @@
-import {
-  numberOfCoins,
-  randomItemFromTableCompound,
-} from '../utils/helpers.js';
+import { diceThrow, randomItemFromTableCompound } from '../utils/helpers.js';
 import { randomWholeNumber } from '../utils/helpers.js';
 
 const randomTreasure = {
   30: () => ({
-    CP: numberOfCoins(5, 6, 1),
+    CP: diceThrow(5, 6),
   }),
   60: () => ({
-    SP: numberOfCoins(4, 6, 1),
+    SP: diceThrow(4, 6),
   }),
   70: () => ({
-    EP: numberOfCoins(3, 6, 1),
+    EP: diceThrow(3, 6),
   }),
   95: () => ({
-    GP: numberOfCoins(3, 6, 1),
+    GP: diceThrow(3, 6),
   }),
   100: () => ({
-    PP: numberOfCoins(1, 6, 1),
+    PP: diceThrow(1, 6),
   }),
 };
 

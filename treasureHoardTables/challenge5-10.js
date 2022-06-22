@@ -1,5 +1,5 @@
 import {
-  numberOfCoins,
+  diceThrow,
   randomItemFromTableCompound,
   randomRangeSelection,
   randomWholeNumber,
@@ -92,10 +92,10 @@ export function treasureF() {
   const die = randomWholeNumber(100);
   const treasure = randomSellable(die);
   return {
-    CP: numberOfCoins(2, 6, 100),
-    SP: numberOfCoins(2, 6, 1000),
-    GP: numberOfCoins(6, 6, 100),
-    PP: numberOfCoins(3, 6, 10),
+    CP: diceThrow(2, 6, 100),
+    SP: diceThrow(2, 6, 1000),
+    GP: diceThrow(6, 6, 100),
+    PP: diceThrow(3, 6, 10),
     ...randomMagicItem(die, treasure),
   };
 }

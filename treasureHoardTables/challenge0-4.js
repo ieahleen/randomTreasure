@@ -1,6 +1,6 @@
 import {
   listOfObjectsFromTable,
-  numberOfCoins,
+  diceThrow,
   randomItemFromTableCompound,
   randomRangeSelection,
 } from '../utils/helpers.js';
@@ -63,9 +63,9 @@ export function treasureE() {
   const die = randomWholeNumber(100);
   const treasure = randomSellable(die);
   return {
-    CP: numberOfCoins(6, 6, 100),
-    SP: numberOfCoins(3, 6, 100),
-    GP: numberOfCoins(2, 6, 100),
+    CP: diceThrow(6, 6, 100),
+    SP: diceThrow(3, 6, 100),
+    GP: diceThrow(2, 6, 100),
     ...randomMagicItem(die, treasure),
   };
 }

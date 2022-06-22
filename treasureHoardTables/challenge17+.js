@@ -8,7 +8,7 @@ import { magicItemsH } from '../tables/magicItemsH.js';
 import { magicItemsI } from '../tables/magicItemsI.js';
 import {
   listOfObjectsFromTable,
-  numberOfCoins,
+  diceThrow,
   randomItemFromTableCompound,
   randomRangeSelection,
   randomWholeNumber,
@@ -80,8 +80,8 @@ export function treasureH() {
   const treasure = randomSellable(die);
 
   return {
-    GP: numberOfCoins(12, 6, 1000),
-    PP: numberOfCoins(8, 6, 1000),
+    GP: diceThrow(12, 6, 1000),
+    PP: diceThrow(8, 6, 1000),
     ...randomMagicItem(die, treasure),
   };
 }
