@@ -117,13 +117,13 @@ export const randomFeatherToken = randomItemFromTable(
   ...randomFeatherTokenDefinition
 );
 
-function randomPatch() {
-  const n = randomWholeNumber(100);
-  if (n <= 8) return 'Bag of 100 gp';
-  if (n <= 15) return 'Silver coffer';
-  if (n <= 22) return 'Iron door';
-  if (n <= 30)
-    return [
+const randomPatchDefinition = [
+  100,
+  {
+    8: 'Bag of 100 gp',
+    15: 'Silver coffer',
+    22: 'Iron door',
+    30: () => [
       gems100(),
       gems100(),
       gems100(),
@@ -134,25 +134,24 @@ function randomPatch() {
       gems100(),
       gems100(),
       gems100(),
-    ];
-  if (n <= 44) return 'Wooden ladder 24 ft.';
-  if (n <= 51) return 'A riding horse with saddle bags';
-  if (n <= 59) return 'Pit';
-  if (n <= 68) return '4 potions of healing';
-  if (n <= 75) return 'Rowboat 12 ft.';
-  if (n <= 83) {
-    const f = randomWholeNumber(6);
-    if (n <= 3)
-      return `${randomItemFromArray(spells1)} spell scroll (1st level)`;
-    if (n <= 5)
-      return `${randomItemFromArray(spells2)} spell scroll (2nd level)`;
-    if (n <= 6)
-      return `${randomItemFromArray(spells3)} spell scroll (3rd level)`;
-  }
-  if (n <= 90) return '2 mastiffs';
-  if (n <= 96) return 'Window (2 ft. x 4 ft. and up to 2 feet deep)';
-  if (n <= 100) return 'Portable ram';
-}
+    ],
+    44: 'Wooden ladder 24 ft.',
+    51: 'A riding horse with saddle bags',
+    59: 'Pit',
+    68: '4 potions of healing',
+    75: 'Rowboat 12 ft.',
+    83: randomItemFromTable(6, {
+      3: () => `${randomItemFromArray(spells1)} spell scroll (1st level)`,
+      5: () => `${randomItemFromArray(spells2)} spell scroll (2nd level)`,
+      6: () => `${randomItemFromArray(spells3)} spell scroll (3rd level)`,
+    }),
+    90: '2 mastiffs',
+    96: 'Window (2 ft. x 4 ft. and up to 2 feet deep)',
+    100: `Portable ram`,
+  },
+];
+
+const randomPatch = randomItemFromTable(...randomPatchDefinition);
 
 export function randomPatches() {
   const n = numberOfCoins(4, 4, 1);
