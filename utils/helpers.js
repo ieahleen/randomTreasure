@@ -172,7 +172,7 @@ const randomCreatureTypeDefinition = [
     50: 'fey',
     75: 'fiends',
     80: 'plants',
-    100: 'undead0',
+    100: 'undead',
   },
 ];
 
