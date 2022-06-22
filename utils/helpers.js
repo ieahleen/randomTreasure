@@ -12,7 +12,7 @@ export const randomItemFromTableCompound =
     return typeof result === 'function' ? result(...args) : result;
   };
 
-const randomItemFromTable =
+export const randomItemFromTable =
   (maxDie, dist) =>
   (...args) => {
     const num = rwn(maxDie);
