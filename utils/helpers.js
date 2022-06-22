@@ -101,15 +101,21 @@ const carpetSizeDefinition = [
 
 export const carpetSize = randomItemFromTable(...carpetSizeDefinition);
 
-export function randomFeatherToken() {
-  const n = randomWholeNumber(100);
-  if (n <= 20) return 'anchor';
-  if (n <= 35) return 'bird';
-  if (n <= 50) return 'fan';
-  if (n <= 65) return 'swan boat';
-  if (n <= 90) return 'tree';
-  if (n <= 100) return 'whip';
-}
+const randomFeatherTokenDefinition = [
+  100,
+  {
+    20: 'anchor',
+    35: 'bird',
+    50: 'fan',
+    65: 'swan boat',
+    90: 'tree',
+    100: 'whip',
+  },
+];
+
+export const randomFeatherToken = randomItemFromTable(
+  ...randomFeatherTokenDefinition
+);
 
 function randomPatch() {
   const n = randomWholeNumber(100);
