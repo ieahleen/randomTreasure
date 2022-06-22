@@ -162,17 +162,21 @@ export function randomPatches() {
   return arr;
 }
 
-export function randomProtection() {
-  const n = randomWholeNumber(100);
-  if (n <= 10) return 'aberrations';
-  if (n <= 20) return 'beats';
-  if (n <= 30) return 'celestials';
-  if (n <= 40) return 'elementals';
-  if (n <= 50) return 'fey';
-  if (n <= 75) return 'fiends';
-  if (n <= 80) return 'plants';
-  if (n <= 100) return 'undead';
-}
+const randomCreatureTypeDefinition = [
+  100,
+  {
+    10: 'aberrations',
+    20: 'beasts',
+    30: 'celestials',
+    40: 'elementals',
+    50: 'fey',
+    75: 'fiends',
+    80: 'plants',
+    100: 'undead0',
+  },
+];
+
+export const randomCreatureType = randomItemFromTable(...randomCreatureType);
 
 export function diceThrow(numberOfDice, typeOfDice, multiplier = 1) {
   let result = 1;

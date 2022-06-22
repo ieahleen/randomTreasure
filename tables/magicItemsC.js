@@ -3,7 +3,7 @@ import { spells4, spells5 } from '../lists/spells.js';
 import {
   randomItemFromArray,
   randomFeatherToken,
-  randomProtection,
+  randomCreatureType,
 } from '../utils/helpers.js';
 
 export function magicItemsC() {
@@ -48,7 +48,7 @@ export function magicItemsC() {
     case 85:
     case 86:
     case 87:
-      return `Scroll of protection, ${randomProtection()}`;
+      return `Scroll of protection, ${randomCreatureType()}`;
     case 88:
     case 89:
       return 'Bag of beans';
