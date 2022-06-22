@@ -70,40 +70,24 @@ export function listOfObjectsFromTable(
   return listOfOutputObjects;
 }
 
-export function randomAlignment() {
-  const n = randomWholeNumber(20);
-  switch (n) {
-    case 1:
-    case 2:
-      return 'chaotic evil';
-    case 3:
-    case 4:
-      return 'chaotic neutral';
-    case 5:
-    case 6:
-    case 7:
-      return 'chaotic good';
-    case 8:
-    case 9:
-      return 'neutral evil';
-    case 10:
-    case 11:
-      return 'pure neutral';
-    case 12:
-    case 13:
-      return 'neutral good';
-    case 14:
-    case 15:
-      return 'lawful evil';
-    case 16:
-    case 17:
-      return 'lawful neutral';
-    case 18:
-    case 19:
-    case 20:
-      return 'lawful good';
-  }
-}
+const randomAlignmentDefinition = [
+  20,
+  {
+    2: 'chaotic evil',
+    4: 'chaotic neutral',
+    7: 'chaotic good',
+    9: 'neutral evil',
+    11: 'pure neutral',
+    13: 'neutral good',
+    15: 'lawful evil',
+    17: 'lawful neutral',
+    20: 'lawful good',
+  },
+];
+
+export const randomAlignment = randomItemFromTable(
+  ...randomAlignmentDefinition
+);
 
 const carpetSizeDefinition = [
   100,
@@ -115,7 +99,7 @@ const carpetSizeDefinition = [
   },
 ];
 
-export const carpetSize = randomItemFromTableCompound(...carpetSizeDefinition);
+export const carpetSize = randomItemFromTable(...carpetSizeDefinition);
 
 export function randomFeatherToken() {
   const n = randomWholeNumber(100);
