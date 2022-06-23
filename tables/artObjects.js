@@ -1,4 +1,4 @@
-import { randomWholeNumber, randomItemFromArray } from '../utils/helpers.js';
+import { randomItemFromArray } from '../utils/helpers.js';
 
 const art25Definition = [
   'Silver ewer',

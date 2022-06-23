@@ -44,11 +44,11 @@ export const randomRangeSelection =
     return typeof result === 'function' ? result(...args) : result;
   };
 
-/* export function randomItemFromArray(...arr) {
+export function randomItemFromArraySimple(...arr) {
   arr = Array.isArray(arr[0]) ? arr[0] : arr;
   const randomItem = arr[Math.floor(Math.random() * arr.length)];
   return typeof randomItem === 'function' ? randomItem() : randomItem;
-} */
+}
 
 export const randomItemFromArray =
   (...arr) =>
