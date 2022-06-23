@@ -5,7 +5,6 @@ import {
   randomItemFromTable,
 } from '../utils/helpers.js';
 import { swords, weapons } from '../lists/weapons.js';
-import { randomWholeNumber } from '../utils/helpers.js';
 import { damageTypes } from '../lists/other.js';
 
 const magicItems = {

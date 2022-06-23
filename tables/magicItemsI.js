@@ -1,192 +1,82 @@
 import { swords } from '../lists/weapons.js';
-import { randomItemFromArray } from '../utils/helpers.js';
-import { randomWholeNumber } from '../utils/helpers.js';
+import {
+  randomItemFromArraySimple,
+  randomItemFromTable,
+} from '../utils/helpers.js';
 
-export function magicItemsI() {
-  const n = randomWholeNumber(100);
-  switch (n) {
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return `Defender, ${randomItemFromArray(swords)}`;
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-      return 'Hummer of thunderbolts';
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-      return `Luck blade, ${randomItemFromArray(swords)}`;
-    case 16:
-    case 17:
-    case 18:
-    case 19:
-    case 20:
-      return 'Sword of answering';
-    case 21:
-    case 22:
-    case 23:
-      return `Holy avenger, ${randomItemFromArray(swords)}`;
-    case 24:
-    case 25:
-    case 26:
-      return 'Ring of djinni summoning';
-    case 27:
-    case 28:
-    case 29:
-      return 'Ring of invisibility';
-    case 30:
-    case 31:
-    case 32:
-      return 'Ring of spell turning';
-    case 33:
-    case 34:
-    case 35:
-      return 'Rod of lordly might';
-    case 36:
-    case 37:
-    case 38:
-      return 'Staff of the magi';
-    case 39:
-    case 40:
-    case 41:
-      return `Vorpal sword, ${randomItemFromArray(
-        'longsword',
-        'scimitar',
-        'greatsword'
-      )}`;
-    case 42:
-    case 43:
-      return 'Belt of cloud giant strength';
-    case 44:
-    case 45:
-      return 'Armor, +2 breastplate';
-    case 46:
-    case 47:
-      return 'Armor, +3 chain mail';
-    case 48:
-    case 49:
-      return 'Armor, +3 chain shirt';
-    case 50:
-    case 51:
-      return 'Cloak of invisibility';
-    case 52:
-    case 53:
-      return `Crystal ball of ${randomItemFromArray(
-        'Mind Reading',
-        'Telepathy',
-        'True Seeing'
-      )}`;
-    case 54:
-    case 55:
-      return 'Armor, +1 half plate';
-    case 56:
-    case 57:
-      return 'Iron flask';
-    case 58:
-    case 59:
-      return 'Armor, +3 leather';
-    case 60:
-    case 61:
-      return 'Armor, +1 plate';
-    case 62:
-    case 63:
-      return 'Robe of the archmagi';
-    case 64:
-    case 65:
-      return 'Rod of resurrection';
-    case 66:
-    case 67:
-      return 'Armor, +1 scale mail';
-    case 68:
-    case 69:
-      return 'Scarab of protection';
-    case 70:
-    case 71:
-      return 'Armor, +2 splint';
-    case 72:
-    case 73:
-      return 'Armor, +2 studded leather';
-    case 74:
-    case 75:
-      return 'Well of many words';
-    case 76:
-      const f = randomWholeNumber(12);
-      switch (f) {
-        case 1:
-        case 2:
-          return 'Armor, +2 half plate';
-        case 3:
-        case 4:
-          return 'Armor, +2 plate';
-        case 5:
-        case 6:
-          return 'Armor, +3 studded leather';
-        case 7:
-        case 8:
-          return 'Armor, +3 breastplate';
-        case 9:
-        case 10:
-          return 'Armor, +3 splint';
-        case 11:
-          return 'Armor, +3 half plate';
-        case 12:
-          return 'Armor, +3 plate';
-      }
-      break;
-    case 77:
-      return 'Apparatus of Kwalish';
-    case 78:
-      return 'Armor of invulnerability';
-    case 79:
-      return 'Belt of storm giant strength';
-    case 80:
-      return 'Cubic gate';
-    case 81:
-      return 'Deck of many things';
-    case 82:
-      return 'Efreeti chain';
-    case 83:
-      return `Armor of resistance, ${randomItemFromArray(damageTypes)}`;
-    case 84:
-      return 'Horn of Valhalla (iron)';
-    case 85:
-      return 'Instrument of the bards (Ollamh harp';
-    case 86:
-      return 'Ioun stone (greater absorption';
-    case 87:
-      return 'Ioun stone (mastery)';
-    case 88:
-      return 'Ioun stone (regeneration)';
-    case 89:
-      return 'Plate armor of etheralness';
-    case 90:
-      return `Plate armor of resistance, ${randomItemFromArray(damageTypes)}`;
-    case 91:
-      return 'Ring of air elemental command';
-    case 92:
-      return 'Ring of earth elemental command';
-    case 93:
-      return 'Ring of fire elemental command';
-    case 94:
-      return 'Ring of three wishes';
-    case 95:
-      return 'Ring of water elemental command';
-    case 96:
-      return 'Sphere of annihilation';
-    case 97:
-      return 'Talisman of pure good';
-    case 98:
-      return 'Talisman of the sphere';
-    case 99:
-      return 'Talisman of the ultimante evil';
-    case 100:
-      return 'Tome of the stilled tongue';
-  }
-}
+const magicItems = {
+  5: () => `Defender, ${randomItemFromArraySimple(swords)}`,
+  10: 'Hummer of thunderbolts',
+  15: () => `Luck blade, ${randomItemFromArraySimple(swords)}`,
+  20: 'Sword of answering',
+  23: () => `Holy avenger, ${randomItemFromArraySimple(swords)}`,
+  26: 'Ring of djinni summoning',
+  29: 'Ring of invisibility',
+  32: 'Ring of spell turning',
+  35: 'Rod of lordly might',
+  38: 'Staff of the magi',
+  41: () =>
+    `Vorpal sword, ${randomItemFromArraySimple(
+      'longsword',
+      'scimitar',
+      'greatsword'
+    )}`,
+  43: 'Belt of cloud giant strength',
+  45: 'Armor, +2 breastplate',
+  47: 'Armor, +3 chain mail',
+  49: 'Armor, +3 chain shirt',
+  51: 'Cloak of invisibility',
+  53: () =>
+    `Crystal ball of ${randomItemFromArraySimple(
+      'Mind Reading',
+      'Telepathy',
+      'True Seeing'
+    )}`,
+  55: 'Armor, +1 half plate',
+  57: 'Iron flask',
+  59: 'Armor, +3 leather',
+  61: 'Armor, +1 plate',
+  63: 'Robe of the archmagi',
+  65: 'Rod of resurrection',
+  67: 'Armor, +1 scale mail',
+  69: 'Scarab of protection',
+  71: 'Armor, +2 splint',
+  73: 'Armor, +2 studded leather',
+  75: 'Well of many words',
+  76: randomItemFromTable(12, {
+    2: 'Armor, +2 half plate',
+    4: 'Armor, +2 plate',
+    6: 'Armor, +3 studded leather',
+    8: 'Armor, +3 breastplate',
+    10: 'Armor, +3 splint',
+    11: 'Armor, +3 half plate',
+    12: 'Armor, +3 plate',
+  }),
+  77: 'Apparatus of Kwalish',
+  78: 'Armor of invulnerability',
+  79: 'Belt of storm giant strength',
+  80: 'Cubic gate',
+  81: 'Deck of many things',
+  82: 'Efreeti chain',
+  83: () => `Armor of resistance, ${randomItemFromArraySimple(damageTypes)}`,
+  84: 'Horn of Valhalla (iron)',
+  85: 'Instrument of the bards (Ollamh harp',
+  86: 'Ioun stone (greater absorption',
+  87: 'Ioun stone (mastery)',
+  88: 'Ioun stone (regeneration)',
+  89: 'Plate armor of etheralness',
+  90: () =>
+    `Plate armor of resistance, ${randomItemFromArraySimple(damageTypes)}`,
+  91: 'Ring of air elemental command',
+  92: 'Ring of earth elemental command',
+  93: 'Ring of fire elemental command',
+  94: 'Ring of three wishes',
+  95: 'Ring of water elemental command',
+  96: 'Sphere of annihilation',
+  97: 'Talisman of pure good',
+  98: 'Talisman of the sphere',
+  99: 'Talisman of the ultimante evil',
+  100: 'Tome of the stilled tongue',
+};
+
+export const magicItemsI = randomItemFromTable(100, magicItems);
