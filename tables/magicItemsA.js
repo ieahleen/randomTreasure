@@ -1,17 +1,18 @@
-import { randomWholeNumber } from '../utils/helpers.js';
-import { randomItemFromArray } from '../utils/helpers.js';
+import { randomItemFromTable } from '../utils/helpers.js';
 import { cantrips, spells1, spells2 } from '../lists/spells.js';
 
-export function magicItemsA() {
-  const n = randomWholeNumber(100);
-  if (n <= 50) return 'Potion of healing';
-  if (n <= 60) return `${randomItemFromArray(cantrips)} spell scroll (cantrip)`;
-  if (n <= 70) return 'Potion of climbing';
-  if (n <= 90)
-    return `${randomItemFromArray(spells1)} spell scroll (1st level)`;
-  if (n <= 94)
-    return `${randomItemFromArray(spells2)} spell scroll (2nd level)`;
-  if (n <= 98) return 'Potion of greater healing';
-  if (n <= 99) return 'Bag of holding';
-  if (n <= 100) return 'Driftglobe';
-}
+const magicItems = [
+  100,
+  {
+    50: 'Potion of healing',
+    60: () => `${cantrips()} spell scroll (cantrip)`,
+    70: 'Potion of climbing',
+    90: () => `${spells1()} spell scroll (1st level)`,
+    94: () => `${spells2()} spell scroll (2nd level)`,
+    98: 'Potion of greater healing',
+    99: 'Bag of holding',
+    100: 'Driftglobe',
+  },
+];
+
+export const magicItemsA = randomItemFromTable(...magicItems);

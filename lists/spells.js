@@ -1,4 +1,5 @@
 import { randomItemFromArray } from '../utils/helpers.js';
+
 const cantrips = randomItemFromArray(
   'Acid Splash, Blade Ward, Chill Touch, Dancing Lights, Druidcraft, Eldritich Blast, Fire Bolt, Friends, Guidance, Light, Magic Hand, Mending, Message, Minor Illusion, Poison Spray, Prestidigitation, Produce Flame, Ray of Frost, Resistance, Sacred Flame, Shillelagh, Shocking Grasp, Spare the Dying, Thaumaturgy, Thorn Whip, Vicious Mockery'.split(
     ', '

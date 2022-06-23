@@ -14,7 +14,7 @@ const gems10Definition = [
     )})`,
   'Blue quartz (transparent pale blue)',
   () =>
-    `Eye agate (translucent circles of ${randomItemFromArray(
+    `Eye agate (translucent circles of ${randomItemFromArraySimple(
       'gray',
       'white',
       'brown',
@@ -47,13 +47,13 @@ const gems50Definition = [
     `Jasper (opaque ${randomItemFromArraySimple('blue', 'black', 'brown')})`,
   'Moonstone (translucent white with pale blue glow)',
   () =>
-    `Onyx (opaque bands of ${randomItemFromArray(
+    `Onyx (opaque bands of ${randomItemFromArraySimple(
       'black and white',
       'pure black',
       'pure white'
     )})`,
   () =>
-    `Quartz (transparent ${randomItemFromArray(
+    `Quartz (transparent ${randomItemFromArraySimple(
       'white',
       'smoky gray',
       'yellow'

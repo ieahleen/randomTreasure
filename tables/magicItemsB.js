@@ -20,10 +20,8 @@ export function magicItemsB() {
   if (n <= 44) return 'Potion of hill giant strength';
   if (n <= 49) return 'Potion of growth';
   if (n <= 54) return 'Potion of water breathing';
-  if (n <= 59)
-    return `${randomItemFromArray(spells2)} spell scroll (2nd level)`;
-  if (n <= 64)
-    return `${randomItemFromArray(spells3)} spell scroll (3rd level)`;
+  if (n <= 59) return `${spells2()} spell scroll (2nd level)`;
+  if (n <= 64) return `${spells3()} spell scroll (3rd level)`;
   if (n <= 67) return 'Bag of Holding';
   if (n <= 70) return "Keoghtom's ointment";
   switch (n) {

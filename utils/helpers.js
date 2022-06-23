@@ -15,7 +15,7 @@ export const randomItemFromTableCompound =
 export const randomItemFromTable =
   (maxDie, dist) =>
   (...args) => {
-    const num = rwn(maxDie);
+    const num = randomWholeNumber(maxDie);
     const keys = Object.keys(dist)
       .map((d) => parseInt(d))
       .sort((a, b) => a - b);
@@ -32,9 +32,8 @@ const partition = (arr, num) => {
   return result;
 };
 
-export const randomRangeSelection =
-  (ranges) =>
-  (num, ...args) => {
+export function randomRangeSelection(ranges) {
+  return (num, ...args) => {
     const parts = partition(ranges, 2);
     const [rangeDef, rangeResult] = parts.find(([rangeDef, result]) => {
       if (!result) return true;
@@ -43,6 +42,7 @@ export const randomRangeSelection =
     const result = rangeResult ? rangeResult : rangeDef;
     return typeof result === 'function' ? result(...args) : result;
   };
+}
 
 export function randomItemFromArraySimple(...arr) {
   arr = Array.isArray(arr[0]) ? arr[0] : arr;
@@ -50,13 +50,13 @@ export function randomItemFromArraySimple(...arr) {
   return typeof randomItem === 'function' ? randomItem() : randomItem;
 }
 
-export const randomItemFromArray =
-  (...arr) =>
-  () => {
+export function randomItemFromArray(...arr) {
+  return () => {
     arr = Array.isArray(arr[0]) ? arr[0] : arr;
     const randomItem = arr[Math.floor(Math.random() * arr.length)];
     return typeof randomItem === 'function' ? randomItem() : randomItem;
   };
+}
 
 export function randomWholeNumber(max) {
   return Math.floor(Math.random() * max) + 1;
@@ -150,9 +150,9 @@ const randomPatchDefinition = [
     68: '4 potions of healing',
     75: 'Rowboat 12 ft.',
     83: randomItemFromTable(6, {
-      3: () => `${randomItemFromArray(spells1)} spell scroll (1st level)`,
-      5: () => `${randomItemFromArray(spells2)} spell scroll (2nd level)`,
-      6: () => `${randomItemFromArray(spells3)} spell scroll (3rd level)`,
+      3: () => `${spells1()} spell scroll (1st level)`,
+      5: () => `${spells2()} spell scroll (2nd level)`,
+      6: () => `${spells3()} spell scroll (3rd level)`,
     }),
     90: '2 mastiffs',
     96: 'Window (2 ft. x 4 ft. and up to 2 feet deep)',
