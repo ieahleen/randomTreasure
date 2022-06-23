@@ -44,11 +44,19 @@ export const randomRangeSelection =
     return typeof result === 'function' ? result(...args) : result;
   };
 
-export function randomItemFromArray(...arr) {
+/* export function randomItemFromArray(...arr) {
   arr = Array.isArray(arr[0]) ? arr[0] : arr;
   const randomItem = arr[Math.floor(Math.random() * arr.length)];
   return typeof randomItem === 'function' ? randomItem() : randomItem;
-}
+} */
+
+export const randomItemFromArray =
+  (...arr) =>
+  () => {
+    arr = Array.isArray(arr[0]) ? arr[0] : arr;
+    const randomItem = arr[Math.floor(Math.random() * arr.length)];
+    return typeof randomItem === 'function' ? randomItem() : randomItem;
+  };
 
 export function randomWholeNumber(max) {
   return Math.floor(Math.random() * max) + 1;
@@ -177,12 +185,14 @@ const randomCreatureTypeDefinition = [
   },
 ];
 
-export const randomCreatureType = randomItemFromTable(...randomCreatureType);
+export const randomCreatureType = randomItemFromTable(
+  ...randomCreatureTypeDefinition
+);
 
 export function diceThrow(numberOfDice, typeOfDice, multiplier = 1) {
   let result = 1;
   for (let i = 0; i < numberOfDice; i++) {
-    output += randomWholeNumber(typeOfDice);
+    result += randomWholeNumber(typeOfDice);
   }
-  return output * multiplier;
+  return result * multiplier;
 }
