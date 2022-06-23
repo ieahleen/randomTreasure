@@ -46,7 +46,8 @@ export const randomRangeSelection =
 
 export function randomItemFromArray(...arr) {
   if (Array.isArray(arr[0])) arr = arr[0];
-  return arr[Math.floor(Math.random() * arr.length)];
+  const randomItem = arr[Math.floor(Math.random() * arr.length)];
+  return typeof randomItem === 'function' ? randomItem() : randomItem;
 }
 
 export function randomWholeNumber(max) {
