@@ -1,4 +1,7 @@
-import { randomItemFromArraySimple } from '../utils/helpers.js';
+import {
+  randomItemFromArraySimple,
+  randomItemFromTable,
+} from '../utils/helpers.js';
 import { spells6, spells7, spells8 } from '../lists/spells.js';
 const magicItems = {
   20: 'Potion of supreme healing',
@@ -24,3 +27,5 @@ const magicItems = {
   99: 'Bag of devouring',
   100: 'Portable Hole',
 };
+
+export const magicItemsD = randomItemFromTable(100, magicItems);
