@@ -1,17 +1,21 @@
-import { diceThrow, randomWholeNumber } from '../utils/helpers.js';
+import { diceThrow, randomItemFromTable } from '../utils/helpers.js';
 
-export function treasureD() {
-  const c = randomWholeNumber(100);
-  const treasure = {};
-  if (c <= 15) {
-    treasure.EP = diceThrow(2, 6, 1000);
-    treasure.GP = diceThrow(8, 6, 100);
-  } else if (c <= 55) {
-    treasure.GP = diceThrow(1, 6, 1000);
-    treasure.PP = diceThrow(1, 6, 100);
-  } else if (c <= 100) {
-    treasure.GP = diceThrow(1, 6, 1000);
-    treasure.PP = diceThrow(2, 6, 100);
-  }
-  return treasure;
-}
+const randomTreasure = [
+  100,
+  {
+    15: () => ({
+      EP: diceThrow(2, 6, 1000),
+      GP: diceThrow(8, 6, 100),
+    }),
+    55: () => ({
+      GP: diceThrow(1, 6, 1000),
+      PP: diceThrow(1, 6, 100),
+    }),
+    100: () => ({
+      GP: diceThrow(1, 6, 1000),
+      PP: diceThrow(2, 6, 100),
+    }),
+  },
+];
+
+export const treasureD = randomItemFromTable(...randomTreasure);
