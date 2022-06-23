@@ -1,29 +1,26 @@
-import { randomWholeNumber } from '../utils/helpers.js';
-import { randomItemFromArray } from '../utils/helpers.js';
+import { randomItemFromArraySimple } from '../utils/helpers.js';
 import { spells6, spells7, spells8 } from '../lists/spells.js';
-
-export function magicItemsD() {
-  const n = randomWholeNumber(100);
-  if (n <= 20) return 'Potion of supreme healing';
-  if (n <= 30) return 'Potion of invisibility';
-  if (n <= 40) return 'Potion of speed';
-  if (n <= 50) return `${spells6()} spell scroll (6th level)`;
-  if (n <= 57) return `${spells7()} spell scroll (7th level)`;
-  if (n <= 62)
-    return `Ammunition, +3 ${randomItemFromArray(
+const magicItems = {
+  20: 'Potion of supreme healing',
+  30: 'Potion of invisibility',
+  40: 'Potion of speed',
+  50: () => `${spells6()} spell scroll (6th level)`,
+  57: () => `${spells7()} spell scroll (7th level)`,
+  62: () =>
+    `Ammunition, +3 ${randomItemFromArraySimple(
       'arrow',
       'blowgun needle',
       'crossbow bolt',
       'sling bullet'
-    )}`;
-  if (n <= 67) return 'Oil of sharpness';
-  if (n <= 72) return 'Potion of flying';
-  if (n <= 77) return 'Potion of cloud giant strength';
-  if (n <= 82) return 'Potion of longevity';
-  if (n <= 87) return 'Potion of vitality';
-  if (n <= 92) return `${spells8()} spell scroll (8th level)`;
-  if (n <= 95) return 'Horseshoes of a zephyr';
-  if (n <= 98) return "Nolzur's marvelous pigments";
-  if (n <= 99) return 'Bag of devouring';
-  if (n <= 100) return 'Portable Hole';
-}
+    )}`,
+  67: 'Oil of sharpness',
+  72: 'Potion of flying',
+  77: 'Potion of cloud giant strength',
+  82: 'Potion of longevity',
+  87: 'Potion of vitality',
+  92: () => `${spells8()} spell scroll (8th level)`,
+  95: 'Horseshoes of a zephyr',
+  98: "Nolzur's marvelous pigments",
+  99: 'Bag of devouring',
+  100: 'Portable Hole',
+};

@@ -1,4 +1,4 @@
-import { randomItemFromTable, randomWholeNumber } from '../utils/helpers.js';
+import { randomItemFromTable } from '../utils/helpers.js';
 import { spells4, spells5 } from '../lists/spells.js';
 import {
   randomItemFromArraySimple,
